@@ -1,1 +1,70 @@
 // Specific CSS for your home-page
+.arrierefond {
+position: relative;
+width: 375px;
+height: 667px;
+
+background: #18FF6D;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+.boutons {
+position: absolute;
+width: 192px;
+height: 68px;
+left: 91px;
+top: 507px;
+background: #04E824;
+}
+
+  .bouton1 {
+  position: absolute;
+  width: 192px;
+  height: 68px;
+  left: 91px;
+  top: 475px;
+  background: #138A36;
+  border-radius: 45px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  }
+
+  .bouton2 {
+  position: absolute;
+  width: 192px;
+  height: 68px;
+  left: 91px;
+  top: 566px;
+  background: #04E824;
+  border-radius: 45px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  }
+
+  .texte {
+  position: absolute;
+  width: 282px;
+  height: 137px;
+  left: 47px;
+  top: 250px;
+  font-family: Prosto One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 32px;
+  text-align: center;
+  color: #FFFFFF;
+
+    p {
+      line-height: 15px;
+      font-family: Purisa;
+      font-weight: bold;
+      font-size: 26px;
+    }
+  }
+}

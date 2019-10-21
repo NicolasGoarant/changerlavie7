@@ -1,0 +1,15 @@
+<% content_for :meta_title %>
+<% content_for :meta_description %>
+<% content_for :meta_image %>
+
+<div class="arrierefond">
+    <%= image_tag "changerlavie.png", alt: "alttext", height: 60, class: "logo" %>
+    <div class="texte">
+      <p>L'information qui</p>
+      <p>étonne</p>
+      <p>éclaire</p>
+      <p>entraîne</p>
+    </div>
+    <%= link_to "SE CONNECTER", newspaper_path, class: "bouton1" %>
+    <%= link_to "S'INSCRIRE", new_user_registration_path, class: "bouton2" %>
+</div>

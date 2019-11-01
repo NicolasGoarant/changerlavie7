@@ -1,0 +1,17 @@
+<%= "Ma bibliothèque" %>
+
+    <div class="card-trip">
+     <%= cl_image_tag @myarticle.photo %>
+      <%= link_to "retourner à ma bibliothèque", admin_library_articles_path %>
+      <%= link_to "Revenir au journal", newspapers_path %>
+      <div class="card-trip-infos">
+        <a href= <%= newspaper_article_path(@myarticle.newspaper, @myarticle) %> >
+          <div>
+            <h2> <%= @myarticle.title %> </h2>
+            <p> <%= @myarticle.summary %></p>
+          </div>
+        </a>
+         <%= cl_image_tag @myarticle.media, class: "card-trip-user avatar-bordered" %>
+      </div>
+    </div>
+

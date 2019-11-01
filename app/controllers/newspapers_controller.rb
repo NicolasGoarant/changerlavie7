@@ -1,9 +1,9 @@
 class NewspapersController < ApplicationController
-  def index
-    @newspapers = Newspaper.all
+  def show
+    @newspaper = Newspaper.find(params[:id])
   end
 
-  def show
-    @newspaper = Newspaper.new
+  def index
+    @articles = Article.all
   end
 end

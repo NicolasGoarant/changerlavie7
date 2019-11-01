@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :libraries do
-    resources :articles
-  end
+  resources :libraries
   resources :newspapers do
     resources :articles
   end
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  namespace :admin do
+    resources :libraries, only: [:index, :show, :create] do
+      resources :articles
+    end
+  end
 end

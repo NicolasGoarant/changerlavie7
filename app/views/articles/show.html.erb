@@ -1,0 +1,36 @@
+<div class="card-trip">
+
+<%= cl_image_tag @article.photo %>
+<%= link_to "Ajouter cet article à ma librairie", admin_library_path(@article.library) %>
+
+
+<%= link_to "Supprimer", newspaper_article_path(@newspaper, @article), method: :delete %>
+<%= link_to "Revenir au journal", newspapers_path %>
+
+<div class="card-trip-infos">
+    <div>
+       <h2> <%= @article.title %> </h2>
+       <p> <%=  @article.Paragraphe1 %> </p>
+       <p> <%=  @article.Paragraphe2 %> </p>
+       <p> <%=  @article.Paragraphe3 %> </p>
+       <p> <%=  @article.Paragraphe4 %> </p>
+       <p> <%=  @article.Paragraphe5 %> </p>
+       <p> <%=  @article.Paragraphe6 %> </p>
+       <p> <%=  @article.Paragraphe7 %> </p>
+       <p> <%=  @article.Paragraphe8 %> </p>
+       <p> <%=  @article.Paragraphe9 %> </p>
+       <p> <%=  @article.Paragraphe10 %> </p>
+       <p> <%=  @article.Paragraphe11 %> </p>
+       <p> <%=  @article.Paragraphe12 %> </p>
+       <p> <%=  @article.Paragraphe13 %> </p>
+       <p> <%=  @article.Paragraphe14 %> </p>
+       <p> <%=  @article.Paragraphe15 %> </p>
+       <p> <%=  @article.Paragraphe16 %> </p>
+       <p> <%=  @article.Paragraphe17 %> </p>
+       <p> <%=  @article.Paragraphe18 %> </p>
+       <p> <%=  @article.Paragraphe19 %> </p>
+       <p> <%=  @article.Paragraphe20 %> </p>
+    </div>
+  </div>
+</div>
+

@@ -9,6 +9,7 @@ class Admin::ArticlesController < ApplicationController
   def index
     @myarticles = Article.all
     @myarticles = Article.where(status: "approved")
+
   end
 
   def destroy

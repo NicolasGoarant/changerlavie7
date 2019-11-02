@@ -8,10 +8,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+
   </head>
 
   <body>
+
+    <% if !devise_controller? && controller_name != 'pages' %>
     <%= render 'shared/navbar' %>
+    <% end %>
+
+
     <%= yield %>
   </body>
 </html>
+
+

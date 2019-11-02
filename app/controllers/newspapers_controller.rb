@@ -5,5 +5,14 @@ class NewspapersController < ApplicationController
 
   def index
     @articles = Article.all
+
+    @articles = Article.geocoded
+
+    @markers = @articles.map do |article|
+      {
+        lat: article.latitude,
+        lng: article.longitude
+      }
+    end
   end
 end

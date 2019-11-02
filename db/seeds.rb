@@ -57,7 +57,9 @@ L’idée est simple : faire intervenir des bikers au sein d’établissements 
   Paragraphe20: "",
   newspaper_id: 1,
   library_id: 1,
-  status: "ouvert"
+  status: "ouvert",
+  address: "27 rue Frederic Bazille, Saint-Malo",
+  city: "saint-malo",
     )
 
 
@@ -91,7 +93,9 @@ Ce système est mis en place pour un an dans trois stations situées dans trois
   Paragraphe20: "",
   newspaper_id: 1,
   library_id: 1,
-  status: "ouvert"
+  status: "ouvert",
+  address: "3 via Piazza Farnese, Roma",
+  city: "Roma"
   )
 
 
@@ -140,5 +144,7 @@ L’interview s’est achevée sur “Rebirth (Reno’s Intro)” de Napkey. ",
   Paragraphe20: "",
   newspaper_id: 1,
   library_id: 1,
-  status: "ouvert"
+  status: "ouvert",
+  address: "110 rue Charles Nungesser, Guipavas",
+  city: "Guipavas",
   )

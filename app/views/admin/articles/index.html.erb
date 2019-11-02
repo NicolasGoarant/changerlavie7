@@ -1,3 +1,16 @@
-index de library article
+<% @myarticles.each do |article|  %>
+    <div class="card-trip">
+     <%= cl_image_tag article.photo %>
+     <%= link_to "retourner à la une", newspapers_path %>
+      <div class="card-trip-infos">
+        <a href= <%= newspaper_article_path(article.newspaper, article) %> >
+          <div>
+            <h2> <%= article.title %> </h2>
+            <p> <%= article.summary %></p>
+          </div>
+        </a>
+         <%= cl_image_tag article.media, class: "card-trip-user avatar-bordered" %>
+      </div>
+    </div>
+<% end %>
 
-<%= @myarticle.summary %>

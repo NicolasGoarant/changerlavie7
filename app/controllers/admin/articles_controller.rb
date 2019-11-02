@@ -3,11 +3,12 @@ class Admin::ArticlesController < ApplicationController
 
   def show
     @myarticle = Article.find(params[:id])
-    @myarticle.save
+    @myarticle.update(status: "approved")
   end
 
   def index
-    @myarticle
+    @myarticles = Article.all
+    @myarticles = Article.where(status: "approved")
   end
 
   def destroy
@@ -19,3 +20,4 @@ class Admin::ArticlesController < ApplicationController
     @library = Library.find(params[:library_id])
   end
 end
+

@@ -5,6 +5,7 @@
         <a href= <%= newspaper_article_path(article.newspaper, article) %> >
           <div>
             <h2> <%= article.title %> </h2>
+            <p> <%= article.latitude %></p>
             <p> <%= article.summary %></p>
           </div>
         </a>
@@ -13,6 +14,8 @@
     </div>
 <% end %>
 
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
 
 <div
   id="map"
@@ -21,6 +24,4 @@
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
 ></div>
-
-
 

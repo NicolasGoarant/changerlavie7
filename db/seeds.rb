@@ -8,7 +8,7 @@ library_1 = Library.create!(
   id: 1,
   )
 
-
+newspaper = Newspaper.create
 
 puts "Creating articles..."
 article_1 = Article.create!(

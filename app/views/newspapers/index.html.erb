@@ -14,14 +14,14 @@
     </div>
 <% end %>
 
-<script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
 
 <div
   id="map"
   style="width: 100%;
   height: 600px;"
   data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  data-mapbox-api-key="pk.eyJ1IjoiYWdnb2xmZSIsImEiOiJjazE3dDc3amYxZmlkM2xwM29jZGp2dmNiIn0.dZFTZnFgD91_YL9rarsVlw"
 ></div>
 

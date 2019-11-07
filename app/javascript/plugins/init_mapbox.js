@@ -6,21 +6,22 @@ const buildMap = () => {
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
   return new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11'
+    style: 'mapbox://styles/mapbox/streets-v11',
   });
 };
 
 const addMarkersToMap = (map, markers) => {
   markers.forEach((marker) => {
+    console.log([ marker.longitude, marker.latitude ]);
     new mapboxgl.Marker()
-      .setLngLat([ marker.lng, marker.lat ])
+      .setLngLat([ marker.longitude, marker.latitude ])
       .addTo(map);
   });
 };
 
 const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
-  markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
+  markers.forEach(marker => bounds.extend([ marker.longitude, marker.latitude ]));
   map.fitBounds(bounds, { padding: 70, maxZoom: 15 });
 };
 

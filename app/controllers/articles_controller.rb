@@ -5,14 +5,8 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles = Article.all
-    @articles = Article.geocoded #returns flats with coordinates
-
-    @markers = @articles.map do |article|
-      {
-        lat: flat.latitude,
-        lng: flat.longitude
-      }
+    @articles = Article.geocoded
+    @markers = @articles.map { |a| { lat: a.longitude, lng: a.latitude } }
   end
 
   def destroy

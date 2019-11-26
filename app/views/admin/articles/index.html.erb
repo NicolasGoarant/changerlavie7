@@ -1,9 +1,9 @@
-<% @myarticles.each do |article|  %>
+<% @articles.each do |article|  %>
     <div class="card-trip">
      <%= cl_image_tag article.photo %>
-     <%= link_to "retourner à la une", newspapers_path %>
+             <%= render 'shared/flashes' %>
       <div class="card-trip-infos">
-        <a href= <%= newspaper_article_path(article.newspaper, article) %> >
+        <a href= <%= admin_library_article_path(article.library, article) %> >
           <div>
             <h2> <%= article.title %> </h2>
             <p> <%= article.summary %></p>
@@ -14,3 +14,10 @@
     </div>
 <% end %>
 
+<div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="pk.eyJ1IjoiYWdnb2xmZSIsImEiOiJjazE3dDc3amYxZmlkM2xwM29jZGp2dmNiIn0.dZFTZnFgD91_YL9rarsVlw"
+></div>

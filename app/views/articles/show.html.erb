@@ -1,10 +1,10 @@
 <div class="card-trip">
 
 <%= cl_image_tag @article.photo %>
-<%= link_to "Ajouter cet article à ma librairie", admin_library_article_path(@article.library, @article) %>
+<%= link_to "Ajouter cet article à ma librairie", admin_library_article_path(@article.library, @article), method: :patch %>
 
 
-<%= link_to "Supprimer", newspaper_article_path(@newspaper, @article), method: :delete %>
+<%= link_to "Supprimer", newspaper_article_path, method: :delete %>
 <%= link_to "Revenir au journal", newspapers_path %>
 
 <div class="card-trip-infos">
@@ -33,4 +33,7 @@
     </div>
   </div>
 </div>
+
+
+
 

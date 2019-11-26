@@ -20,10 +20,12 @@
 
   <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+
     <%= yield %>
       <% if !devise_controller? && controller_name != 'pages' %>
       <%= render 'shared/bottom_bar' %>
       <% end %>
+
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   </body>

@@ -1,17 +1,33 @@
-<%= "Ma bibliothèque" %>
+<div class="card-trip">
 
-    <div class="card-trip">
-     <%= cl_image_tag @myarticle.photo %>
-      <%= link_to "retourner à ma bibliothèque", admin_library_articles_path %>
-      <%= link_to "Revenir au journal", newspapers_path %>
-      <div class="card-trip-infos">
-        <a href= <%= newspaper_article_path(@myarticle.newspaper, @myarticle) %> >
-          <div>
-            <h2> <%= @myarticle.title %> </h2>
-            <p> <%= @myarticle.summary %></p>
-          </div>
-        </a>
-         <%= cl_image_tag @myarticle.media, class: "card-trip-user avatar-bordered" %>
-      </div>
+<%= cl_image_tag @article.photo %>
+
+<%= link_to "Supprimer cet article de ma bibliothèque", admin_library_article_path(@article.library, @article), method: :patch %>
+
+<div class="card-trip-infos">
+    <div>
+       <h2> <%= @article.title %> </h2>
+       <p> <%=  @article.Paragraphe1 %> </p>
+       <p> <%=  @article.Paragraphe2 %> </p>
+       <p> <%=  @article.Paragraphe3 %> </p>
+       <p> <%=  @article.Paragraphe4 %> </p>
+       <p> <%=  @article.Paragraphe5 %> </p>
+       <p> <%=  @article.Paragraphe6 %> </p>
+       <p> <%=  @article.Paragraphe7 %> </p>
+       <p> <%=  @article.Paragraphe8 %> </p>
+       <p> <%=  @article.Paragraphe9 %> </p>
+       <p> <%=  @article.Paragraphe10 %> </p>
+       <p> <%=  @article.Paragraphe11 %> </p>
+       <p> <%=  @article.Paragraphe12 %> </p>
+       <p> <%=  @article.Paragraphe13 %> </p>
+       <p> <%=  @article.Paragraphe14 %> </p>
+       <p> <%=  @article.Paragraphe15 %> </p>
+       <p> <%=  @article.Paragraphe16 %> </p>
+       <p> <%=  @article.Paragraphe17 %> </p>
+       <p> <%=  @article.Paragraphe18 %> </p>
+       <p> <%=  @article.Paragraphe19 %> </p>
+       <p> <%=  @article.Paragraphe20 %> </p>
     </div>
+  </div>
+</div>
 

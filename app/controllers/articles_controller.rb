@@ -6,7 +6,8 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.geocoded
-    @markers = @articles.map { |a| { lat: a.longitude, lng: a.latitude } }
+    @markers = @articles.map { |a| { lat: a.longitude, lng: a.latitude }
+  }
   end
 
   def destroy

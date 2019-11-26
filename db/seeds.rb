@@ -1,16 +1,27 @@
 puts "Cleaning database..."
 Article.destroy_all
 Library.destroy_all
+Newspaper.destroy_all
+User.destroy_all
 
-puts "Creating libraries"
-
-library_1 = Library.create!(
+puts "Creating Users..."
+user = User.create!(
+  email: "nicolas.goarant@gmail.com",
+  password: "secret",
   id: 1,
   )
 
-newspaper = Newspaper.create
+puts "Creating Newspapers..."
+newspaper = Newspaper.create!(
+  id: 1,
+  )
 
-puts "Creating articles..."
+puts "Creating Libraries..."
+library = Library.create!(
+  id: 1,
+  user_id: 1,)
+
+puts "Creating Articles..."
 article_1 = Article.create!(
   title: "Lutter contre le harcèlement à l'école",
   summary: "L’idée est simple : faire intervenir des bikers au sein d’établissements scolaires (du CM1/CM2 à la 6e-5e), pour sensibiliser sur le thème du harcèlement. ",
@@ -148,3 +159,6 @@ L’interview s’est achevée sur “Rebirth (Reno’s Intro)” de Napkey. ",
   address: "110 rue Charles Nungesser, Guipavas",
   city: "Guipavas",
   )
+
+
+

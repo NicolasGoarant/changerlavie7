@@ -160,5 +160,25 @@ L’interview s’est achevée sur “Rebirth (Reno’s Intro)” de Napkey. ",
   city: "Guipavas",
   )
 
+article_4 = Article.create!(
+  summary: "Six mois après son installation, l’îlot écolo du canal Saint-Martin affiche une végétation luxuriante et accueille oiseaux et poissons.",
+  # photo: Rails.root.join("vohux4g56rromvjbdx6z").open,
+  photo: "https://res.cloudinary.com/dgz1y7eww/image/upload/v1575132769/juiingtmpchahz34bhla.jpg",
+  media: 'https://res.cloudinary.com/dgz1y7eww/image/upload/v1570634953/mzczqamdolcrnh1p4zsv.jpg',
+  content: "",
+  title: "Paris : le radeau végétalisé est devenu un refuge de biodiversité",
+  Paragraphe1: "Mis à flot en février au niveau du 94, quai de Jemmapes (Xe), certains ne lui prédisaient pas un grand avenir. Et pourtant, six mois après son installation, le rdaea uvégétalisé du canal Saint-Martin (X e ) est franchement luxuriant. Mieux, il remplit parfaitement sa fonction écologique, assure sa conceptrice Katarina Dear, une trentenaire parisienne qui l'a financé grâce au budget participatif de la Ville de Paris. « Je suis très contente du résultat, explique-t-elle. Non seulement il apporte une note bucolique sur le canal mais il a permis l'éclosion d'une vraie biodiversité ».",
+  Paragraphe2: "Les premières mesures d'impact valident en effet son intuition de départ. Choisies pour leur capacité à stocker les polluants de l'eau, les plantes piquées dans le radeau de 40 m2 (fabriqué en plastique recyclé et en fibre de coco) se sont épanouies. Et au milieu des iris des marais, de la menthe aquatique et des joncs, animaux et insectes n'ont pas tardé à élire domicile.",
+  Paragraphe3: "« Il y a une famille de canards colvert qui y vit en permanence, détaille Katarina Dear. On peut aussi y observer tous les jours un canard de barbarie de couleur blanche. Et puis, on voit régulièrement la bergeronnette des ruisseaux (NDLR : un oiseau protégé reconnaissable à ses plumes jaunes). C'est un signe positif car cela veut dire qu'un écosystème se met en place ».« Il y a une famille de canards colvert qui y vit en permanence, détaille Katarina Dear. On peut aussi y observer tous les jours un canard de barbarie de couleur blanche. Et puis, on voit régulièrement la bergeronnette des ruisseaux (NDLR : un oiseau protégé reconnaissable à ses plumes jaunes). C'est un signe positif car cela veut dire qu'un écosystème se met en place ».",
+  Paragraphe4: "Voilà pour la partie émergée. Car, sous le radeau, des caissons grillagés et des modules remplis de coquilles d'huîtres ont été installés pour servir de refuge et de garde-manger aux poissons. « Un scaphandrier a effectué une plongée en juin et a pu observer que plusieurs espèces de poissons venaient pour se reproduire et nidifier » explique la jeune femme.",
+  Paragraphe5: "À la tête de son association Nature & Us, elle a pu organiser avant l'été un atelier de sensibilisation à la biodiversité autour de son îlot pour une vingtaine d'élèves du X e. Une expérience qu'elle rééditera à la rentrée. Autre motif de satisfaction : mis à part l'abordage de quelques canettes de bière ou de papiers gras, l'îlot n'a pas été vandalisé. « Les gens sont intrigués mais les retours sont très positifs » se réjouit Katarina Dear qui a déjà été sollicitée pour installer de nouveaux radeaux végétalisés à Paris et dans d'autres villes françaises.",
+  newspaper_id: 1,
+  library_id: 1,
+  status: "ouvert",
+  address: "94 quai de Jemmapes, Paris",
+  city: "Paris",
+  )
+
+
 
 

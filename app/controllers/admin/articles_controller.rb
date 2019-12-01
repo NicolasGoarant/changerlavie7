@@ -3,6 +3,7 @@ class Admin::ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @markers = @article.as_json(only: [:longitude, :latitude])
 
     # @article.update(status: "approved")
     # @article.save

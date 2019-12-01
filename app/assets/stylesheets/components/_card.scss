@@ -23,13 +23,28 @@
   margin: 0;
 }
 
-
 .card-trip .card-trip-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  color-text: black;
+  font-family: Liberation Serif;
+  line-height: 25px;
+}
+
+.card-trip-infos h2 {
+  color: #138A36;
+  padding-bottom: 8px;
+}
+
+.card-trip-infos p {
+  font-size: 14px;
+  font-family: Serif;
+  line-height: 25px;
+  color: black;
+  padding-bottom: 5px;
 }
 
 .card-trip-infos .card-trip-user {
@@ -39,4 +54,8 @@
   width: 40px;
 }
 
+.bibliotheque_vide {
+  width: 200px;
 
+
+}

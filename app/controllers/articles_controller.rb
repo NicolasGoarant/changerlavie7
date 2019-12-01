@@ -2,12 +2,12 @@ class ArticlesController < ApplicationController
  before_action :set_newspaper
 
   def show
+    @markers = @article.as_json(only: [:longitude, :latitude])
   end
 
   def index
     @articles = Article.geocoded
-    @markers = @articles.map { |a| { lat: a.longitude, lng: a.latitude }
-  }
+    @markers = @articles.map { |a| { lat: a.longitude, lng: a.latitude } }
   end
 
   def destroy

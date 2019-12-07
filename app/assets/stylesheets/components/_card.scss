@@ -3,12 +3,14 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   z-index: 2;
+
 }
 
 .card-trip > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
+
 }
 
 .card-trip h2 {
@@ -39,12 +41,25 @@
   padding-bottom: 8px;
 }
 
+.card-trip-infos h4 {
+  color: black;
+  padding-bottom: 2px;
+  font-size: 14px;
+  font-style: italic;
+}
+
 .card-trip-infos p {
   font-size: 14px;
   font-family: Serif;
   line-height: 25px;
   color: black;
   padding-bottom: 5px;
+}
+
+.card-trip-infos h3 {
+  font-size: 14px;
+  color: #285238;
+  font-style: bold;
 }
 
 .card-trip-infos .card-trip-user {
@@ -55,7 +70,191 @@
 }
 
 .bibliotheque_vide {
-  width: 200px;
+  width: 250px;
+  padding-top: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.titre h2 {
+  text-align: center;
+  font-family: Serif;
+  color: #285238;
+}
+
+.card-trip-infos :hover {
+  color: #138A36;
+  opacity: 2;
+  text-decoration: none;
+}
+
+.titre h4 {
+  text-align: center;
+  font-family: Serif;
+  color: #285238;
+  font-size: 15px;
+}
 
 
+.bibliotheque_vide h4 {
+    text-align: center;
+  font-family: Serif;
+  color: #285238;
+  font-size: 15px;
+}
+
+.zero_articles h4 {
+    text-align: center;
+  font-family: Serif;
+  color: #285238;
+  font-size: 25px;
+    padding-bottom: 80px;
+
+}
+
+
+.card-product {
+  overflow: hidden;
+  height: 150px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+  padding-left: 7px;
+  color-text: black;
+}
+
+.card-product img {
+  height: 60%;
+  width: 80px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 11px;
+  font-weight: bold;
+  margin: 0;
+  color: black;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  color: black;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+.card-product-infos :hover {
+  color: #138A36;
+  opacity: 2;
+  text-decoration: none;
+}
+
+
+.card-trip .card-trip-infos-bis {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  color-text: black;
+  font-family: Liberation Serif;
+  line-height: 25px;
+}
+
+.card-trip-infos-bis h2 {
+  color: #138A36;
+  padding-bottom: 8px;
+}
+
+.card-trip-infos-bis h4 {
+  color: black;
+  padding-bottom: 2px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.card-trip-infos-bis p {
+  font-size: 14px;
+  font-family: Serif;
+  line-height: 25px;
+  color: black;
+  padding-bottom: 5px;
+}
+
+.card-trip-infos-bis h3 {
+  font-size: 14px;
+  color: #285238;
+  font-style: bold;
+}
+
+  .media_place {
+  position: relative;
+  left: 225px;
+  top: -50px;
+  width: 35%;
+  height: 35%;
+  }
+
+.photo_place {
+
+    height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.card-trip_ter {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+.card-trip-infos_ter h2 {
+  text-align: center;
+  font-family: Serif;
+  color: #285238;
+  font-size: 15px;
+}
+
+
+.card-trip_ter .card-trip-infos_ter {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  color-text: black;
+  font-family: Liberation Serif;
+  line-height: 25px;
+}
+
+.card-trip .media {
+  height: 50px;
+  width: 40%;
+  padding-top: 10px;
+  padding-left: 17px;
+}
+
+.bloc-auteur {
+  display: flex;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+
+    p {
+      font-size: 15px;
+      font-style: bold;
+      padding-left: 5px;
+    }
 }

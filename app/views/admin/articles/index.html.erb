@@ -1,27 +1,30 @@
+<div class="titre" >
+  <h2> Ma bibliothèque </h2>
+</div>
+
 <div>
-
-Ma bibliothèque
-
   <% if @articles.empty? %>
     <%= image_tag "library.png", class: "bibliotheque_vide" %>
-   <% else %>
-
-<% @articles.each do |article|  %>
-    <div class="card-trip">
-     <%= cl_image_tag article.photo %>
-             <%= render 'shared/flashes' %>
-      <div class="card-trip-infos">
-        <a href= <%= admin_library_article_path(article.library, article) %> >
-          <div>
-            <h2> <%= article.title %> </h2>
-            <p> <%= article.summary %></p>
-          </div>
-        </a>
-         <%= cl_image_tag article.media, class: "card-trip-user avatar-bordered" %>
-      </div>
+    <div class="zero_articles ">
+    <h4> <strong> Pas d'articles sélectionnés - pour le moment ! </strong> </h4>
     </div>
-
-
+   <% else %>
+      <% @articles.each do |article|  %>
+        <div class="card-trip">
+         <%= cl_image_tag article.photo %>
+                 <%= render 'shared/flashes' %>
+          <div class="card-trip-infos">
+            <a href= <%= admin_library_article_path(article.library, article) %> >
+              <div>
+                <h2> <%= article.title %> </h2>
+                <p> <%= article.summary %></p>
+                <h3><strong> Idée ➔ <%= article.engagement %></strong></h3>
+              </div>
+            </a>
+             <%= cl_image_tag article.media, class: "card-trip-user avatar-bordered" %>
+          </div>
+        </div>
+      <% end %>
   <div
     id="map"
     style="width: 100%;
@@ -30,7 +33,5 @@ Ma bibliothèque
     data-mapbox-api-key="pk.eyJ1IjoiYWdnb2xmZSIsImEiOiJjazE3dDc3amYxZmlkM2xwM29jZGp2dmNiIn0.dZFTZnFgD91_YL9rarsVlw"
   ></div>
 
-<% end %>
-<% end %>
-
+  <% end %>
 </div>

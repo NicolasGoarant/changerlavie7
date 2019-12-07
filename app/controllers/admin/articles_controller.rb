@@ -2,8 +2,12 @@ class Admin::ArticlesController < ApplicationController
  before_action :set_library
 
   def show
+
     @article = Article.find(params[:id])
-    @markers = @article.as_json(only: [:longitude, :latitude])
+    @articles = Article.geocoded.where(id: @article)
+    @markers = @articles.as_json(only: [:longitude, :latitude])
+        # @articles = Article.geocoded
+
 
     # @article.update(status: "approved")
     # @article.save

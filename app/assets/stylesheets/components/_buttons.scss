@@ -1,0 +1,85 @@
+.bouton3 {
+  background: #138A36;
+  border-radius: 45px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  width: 125px;
+  height: 52px;
+  text-align: center;
+  display: flex;
+  margin : auto;
+}
+
+.bouton4 {
+  background: #138A36;
+  border-radius: 45px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  width: 125px;
+  height: 52px;
+  text-align: center;
+  margin : auto;
+  display: flex;
+}
+
+.boutons_article {
+  display: flex;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+
+}
+
+.bouton5 {
+  background: #138A36;
+  border-radius: 45px;
+  color: white;
+  font-weight: bold;
+  width: 150px;
+  height: 45px;
+  text-align: center;
+  align-items: center;
+}
+
+a.bouton4:hover
+{
+text-decoration: none;
+color: #18FF6D;
+}
+
+a.bouton3:hover
+{
+text-decoration: none;
+color: #18FF6D;
+}
+
+.bouton_suppression {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.bouton6 {
+  background: #138A36;
+  border-radius: 45px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  width: 125px;
+  height: 52px;
+  text-align: center;
+  margin : auto;
+  display: block;
+}
+
+a.bouton6:hover
+{
+text-decoration: none;
+color: #18FF6D;
+}

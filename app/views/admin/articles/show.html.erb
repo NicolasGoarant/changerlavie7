@@ -2,11 +2,14 @@
 
 <%= cl_image_tag @article.photo %>
 
-<%= link_to "Supprimer cet article de ma bibliothèque", admin_library_article_path(@article.library, @article), method: :patch %>
+<div class="boutons_article">
+<%= link_to "Ôter de ma bibliothèque", admin_library_article_path(@article.library, @article), class: "bouton6",  method: :patch %>
+</div>
 
-<div class="card-trip-infos">
+<div class="card-trip-infos-bis">
     <div>
        <h2> <%= @article.title %> </h2>
+       <h3><strong> Idée ➔ <%= @article.engagement %></strong></h3>
        <p> <%=  @article.Paragraphe1 %> </p>
        <p> <%=  @article.Paragraphe2 %> </p>
        <p> <%=  @article.Paragraphe3 %> </p>
@@ -30,8 +33,6 @@
     </div>
   </div>
 </div>
-
-
 
 <div
   id="map"

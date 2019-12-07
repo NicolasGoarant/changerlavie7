@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_30_163207) do
+ActiveRecord::Schema.define(version: 2019_12_03_153224) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -48,6 +48,8 @@ ActiveRecord::Schema.define(version: 2019_11_30_163207) do
     t.string "address"
     t.string "city"
     t.string "auteur"
+    t.string "engagement"
+    t.integer "place"
     t.index ["library_id"], name: "index_articles_on_library_id"
     t.index ["newspaper_id"], name: "index_articles_on_newspaper_id"
   end

@@ -1,0 +1,106 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+    {
+        "taskName": "rubocop",
+        "type": "shell",
+        "command": "rubocop --auto-correct ${relativeFile}",
+        "problemMatcher": [],
+        "presentation": {
+        "reveal": "never"
+    }
+    },
+    {
+        "taskName": "rspec",
+        "type": "shell",
+        "command": "bundle exec rspec",
+        "problemMatcher": [],
+        "presentation": {
+        "reveal": "always"
+    }
+    },
+    {
+        "taskName": "Bundle install",
+        "type": "shell",
+        "command": "bundle",
+        "problemMatcher": [],
+        "presentation": {
+        "reveal": "always"
+    }
+    },
+    {
+        "taskName": "rspec file",
+        "type": "shell",
+        "command": "bundle exec rspec ${relativeFile}",
+        "problemMatcher": [],
+        "presentation": {
+        "reveal": "always"
+    }
+    },
+    {
+        "taskName": "rails c",
+        "type": "shell",
+        "command": "bundle exec rails console",
+        "problemMatcher": [],
+        "presentation": {
+        "reveal": "always"
+    }
+    },
+    {
+        "taskName": "rails s",
+        "type": "shell",
+        "command": "bundle exec rails server",
+        "problemMatcher": [],
+        "presentation": {
+        "reveal": "always"
+    }
+    },
+    {
+        "taskName": "cap production deploy",
+        "type": "shell",
+        "command": "cap production deploy",
+        "problemMatcher": [],
+        "presentation": {
+        "reveal": "always"
+    }
+    },
+    {
+        "taskName": "cap staging deploy",
+        "type": "shell",
+        "command": "cap staging deploy && say 'Tache terminée avec succès'",
+        "problemMatcher": [],
+        "presentation": {
+        "reveal": "always"
+    }
+    },
+    {
+        "taskName": "quality + deploy prod",
+        "type": "shell",
+        "command": "bin/quality && cap production deploy && say 'Tache terminée avec succès'",
+        "problemMatcher": [],
+        "presentation": {
+        "reveal": "always"
+        }
+    },
+    {
+        "taskName": "Quality",
+        "type": "shell",
+        "command": "bin/quality",
+        "problemMatcher": [],
+        "presentation": {
+        "reveal": "always"
+        }
+    },
+    {
+        "taskName": "Sync Staging DB",
+        "type": "shell",
+        "command": "RAILS_ENV='staging' rake sync:db",
+        "problemMatcher": [],
+        "presentation": {
+        "reveal": "always"
+    }
+    }
+    ]
+    }

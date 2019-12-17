@@ -72,7 +72,8 @@ L’idée est simple : faire intervenir des bikers au sein d’établissements 
   address: "27 rue Frederic Bazille, Saint-Malo",
   city: "saint-malo",
   engagement: "proposer un projet similaire avec l'école de ses enfants",
-  place: 7,
+  place: 1,
+  publication: Date.new(2014, 5, 17),
     )
 
 
@@ -93,7 +94,8 @@ Ce système est mis en place pour un an dans trois stations situées dans trois
   address: "3 via Piazza Farnese, Roma",
   city: "Roma",
   engagement: "s'adresser à sa mairie ou déposer un projet dans le cadre d'un budget participatif",
-  place: 6,
+  place: 1,
+  publication: Date.new(2013,4,6),
   )
 
 
@@ -143,7 +145,8 @@ L’interview s’est achevée sur “Rebirth (Reno’s Intro)” de Napkey. ",
   address: "110 rue Charles Nungesser, Guipavas",
   city: "Guipavas",
   engagement: "aller sur Ecotree.fr",
-  place: 5,
+  place: 1,
+  publication: Date.new(2009,4,1),
   )
 
 article_4 = Article.create!(
@@ -165,7 +168,8 @@ article_4 = Article.create!(
   city: "Paris",
   auteur: "par Julien Duffé",
   engagement: "déposer un projet similaire dans le cadre d'un projet participatif",
-  place: 4,
+  place: 2,
+  publication: Date.new(2012,1,25),
   )
 
 
@@ -191,7 +195,8 @@ article_5 = Article.create!(
   city: "Paris",
   auteur: "par Margherita Nasi et Camille Thomine",
   engagement: "aller sur www.lewagon.com",
-  place: 3,
+  place: 2,
+  publication: Date.new(2011,5,17),
   )
 
 
@@ -214,6 +219,7 @@ Ce système est mis en place pour un an dans trois stations situées dans trois
   city: "Montlouis-sur-Loire",
   engagement: "acheter des vêtements ainsi conçus",
   place: 2,
+  publication: Date.new(2018,11,26),
   )
 
 
@@ -235,5 +241,6 @@ article_7 = Article.create!(
   city: "Paris",
   auteur: "par Florence Méréo",
   engagement: "aller sur www.dondemoelleosseuse.fr",
-  place: 1,
+  place: 2,
+  publication: Date.new(2016,4,30),
     )

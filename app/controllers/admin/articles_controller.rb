@@ -2,25 +2,14 @@ class Admin::ArticlesController < ApplicationController
  before_action :set_library
 
   def show
-
     @article = Article.find(params[:id])
     @articles = Article.geocoded.where(id: @article)
     @markers = @articles.as_json(only: [:longitude, :latitude])
-        # @articles = Article.geocoded
-
-
-    # @article.update(status: "approved")
-    # @article.save
-    # @articles = Article.where(status: "approved")
-
-    # flash[:notice] = 'Article ajouté'
-    # redirect_to admin_library_articles_path(@library)
   end
 
   def index
-    @articles = Article.geocoded.where(status: "approved")
+    @articles = Article.geocoded.where(status: "approved").order("publication DESC")
     @markers = @articles.as_json(only: [:longitude, :latitude])
-
   end
 
   def destroy
@@ -54,7 +43,4 @@ class Admin::ArticlesController < ApplicationController
   def set_library
     @library = Library.find(params[:library_id])
   end
-
-
 end
-

@@ -4,5 +4,6 @@ class Article < ApplicationRecord
 
   belongs_to :library
   belongs_to :newspaper
-
+  mount_uploader :photo, PhotoUploader
+  mount_uploader :media, PhotoUploader
 end

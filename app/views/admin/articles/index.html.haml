@@ -1,0 +1,44 @@
+%main.col-md-9.ml-sm-auto.col-lg-10.p-4{:role => "main"}
+  .mb-4
+    .d-flex.justify-content-between
+      .h3.font-weight-bold Article
+      = link_to new_admin_article_url, class: "btn btn-primary", style:"line-height:1.7rem" do
+        %i.far.fa-edit.mr-1
+        Publier un nouvel article
+    .text-muted
+      = @articles.total_count
+      articles enregistrées
+
+  .table-responsive.bg-white
+    %table.table.table-bordered.table-hover.table-striped.table-sm
+      %thead
+        %tr
+          %th{scope: "col"} id
+          %th{scope: "col"} titre
+
+          %th.text-center{scope: "col"} Publié
+          %th.text-center{scope: "col"} Date de publication
+
+          %th.text-center{scope: "col"} Rédacteur
+          %th.text-center{scope: "col"} Type
+          %th.text-center{scope: "col", style: "width:140px"} Actions
+      %tbody
+        - @articles.each do |article|
+          %tr
+            %td= article.id
+            %td
+              = article.title
+
+            %td.text-center
+
+            %td.text-center
+              = I18n.l article.publication if article.publication
+
+            %td.text-center= article.auteur
+            %td.text-center
+
+            %td
+              .float-right.pr-2
+                = link_to "editer", edit_admin_article_url(article), class: "btn btn-primary btn-sm"
+                = link_to "suppr.", admin_article_url(article), method: "delete", data: { confirm: "Êtes vous sûr ?"}, class: "btn btn-outline-primary btn-sm"
+  = paginate @articles

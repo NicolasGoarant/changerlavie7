@@ -26,7 +26,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 gem 'inline_svg', '~> 1.5', '>= 1.5.2'
-
+gem 'haml'
 gem 'geocoder'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
@@ -41,8 +41,13 @@ gem 'simple_form'
 gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'cloudinary', '~> 1.9.1'
+gem 'kaminari'
 
 gem 'carrierwave', '~> 1.2'
+
+# JS
+gem 'momentjs-rails', '>= 2.9.0'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

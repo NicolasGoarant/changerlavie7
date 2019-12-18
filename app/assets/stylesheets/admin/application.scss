@@ -1,0 +1,38 @@
+/*
+ *= require vendors/trix.css
+ *= require vendors/pickaday.css
+ *= require_self
+ */
+
+ body{
+  font-size: .85rem;
+  font-family: "Open Sans";
+  height:100%;
+  min-height:100%;
+}
+main{background:#F9F9F9}
+
+.link, .link:visited{
+  color:#06C;text-decoration: underline;
+}
+
+trix-editor a{color:#09C;text-decoration: underline}
+
+.tab-pane{
+  min-height: 50vh;
+}
+
+.notification{
+  background: red;
+  border-radius: 50px;
+  color:#FFF;
+  display: inline-block;
+  font-size: .7em;
+  font-weight: bold;
+  height:25px;
+  line-height: 18px;
+  position: relative;
+  text-align: center;
+  top: -8px;
+  width:25px;
+}

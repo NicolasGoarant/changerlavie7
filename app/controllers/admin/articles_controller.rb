@@ -1,5 +1,22 @@
 class Admin::ArticlesController < ApplicationController
- before_action :set_library
+  layout "/admin/application"
+
+  def new
+    @article = Article.new
+  end
+
+  def create
+    @article = Article.new(article_params)
+    if @article.save
+      redirect_to edit_admin_article_path(@article), notice: "Article sauvegardé avec succès."
+    else
+      render :new
+    end
+  end
+
+  def edit
+    @article = Article.find(params[:id])
+  end
 
   def show
     @article = Article.find(params[:id])
@@ -8,39 +25,32 @@ class Admin::ArticlesController < ApplicationController
   end
 
   def index
-    @articles = Article.geocoded.where(status: "approved").order("publication DESC")
+    @articles = Article.order("publication DESC").page(params[:page])
     @markers = @articles.as_json(only: [:longitude, :latitude])
   end
 
   def destroy
     @article = Article.find(params[:id])
-    @article.update(status: 'ouvert')
-    @article.save
-    redirect_to admin_library_path(@library)
+    @article.destroy
+    redirect_to admin_articles_path, notice: "Article supprimé"
   end
 
   def update
     @article = Article.find(params[:id])
-
-    if @article.status == 'ouvert'
-    @article.update(status: 'approved')
-    @article.save
-    flash[:notice] = 'Article ajouté'
-
-    redirect_to admin_library_articles_path(@library)
-
+    if @article.update_attributes(article_params)
+      redirect_to edit_admin_article_path(@article), notice: "Article sauvegardé"
     else
-    @article.update(status: 'ouvert')
-    @article.save
-
-    flash[:notice] = 'Article supprimé'
-
-    redirect_to admin_library_articles_path(@library)
-
+      redirect_to edit_admin_article_path(@article), notice: "Erreur lors de la sauvegarde"
     end
   end
 
   def set_library
     @library = Library.find(params[:library_id])
+  end
+
+  private
+
+  def article_params
+    params.require(:article).permit(:title, :newspaper_id, :summary, :photo, :media, :content, :address, :engagement, :publication, :auteur)
   end
 end

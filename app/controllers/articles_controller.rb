@@ -1,5 +1,4 @@
 class ArticlesController < ApplicationController
-before_action :set_newspaper
 
   def show
     @article = Article.find(params[:id])
@@ -36,9 +35,5 @@ before_action :set_newspaper
     @newspaper = Newspaper.find(params[:newspaper_id])
   end
 
-  def article_params
-    params.require(:article).permit(:title, :newspaper, :summary, :photo,
-                                    :media, :content, :address, :engagement,
-                                    :publication)
-  end
+
 end

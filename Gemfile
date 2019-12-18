@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.3'
+ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -26,7 +26,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 gem 'inline_svg', '~> 1.5', '>= 1.5.2'
-
+gem 'haml'
 gem 'geocoder'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
@@ -40,9 +40,14 @@ gem 'simple_form'
 
 gem 'dotenv-rails', groups: [:development, :test]
 
-gem 'cloudinary', '~> 1.9.1'
+gem 'carrierwave'
+gem 'cloudinary'
+gem 'kaminari'
 
-gem 'carrierwave', '~> 1.2'
+
+# JS
+gem 'momentjs-rails', '>= 2.9.0'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -53,8 +58,9 @@ gem 'carrierwave', '~> 1.2'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :development do

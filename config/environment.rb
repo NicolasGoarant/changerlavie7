@@ -5,3 +5,5 @@ require 'carrierwave'
 
 # Initialize the Rails application.
 Rails.application.initialize!
+require 'carrierwave/orm/activerecord'
+

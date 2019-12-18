@@ -41,3 +41,6 @@
 
   .mt-3
     = f.submit "Ajouter cet article", class: "btn btn-primary"
+    - if @article.persisted?
+      ou
+      = link_to "voir l'article", @article

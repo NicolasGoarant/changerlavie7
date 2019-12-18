@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_13_154435) do
+ActiveRecord::Schema.define(version: 2019_11_18_093321) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -18,39 +18,19 @@ ActiveRecord::Schema.define(version: 2019_12_13_154435) do
     t.string "photo"
     t.string "media"
     t.string "content"
+    t.string "city"
+    t.string "address"
+    t.string "auteur"
+    t.string "engagement"
+    t.string "place"
+    t.string "publication"
     t.integer "library_id"
     t.integer "newspaper_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "Paragraphe1"
-    t.string "Paragraphe2"
-    t.string "Paragraphe3"
-    t.string "Paragraphe4"
-    t.string "Paragraphe5"
-    t.string "Paragraphe6"
-    t.string "Paragraphe7"
-    t.string "Paragraphe8"
-    t.string "Paragraphe9"
-    t.string "Paragraphe10"
-    t.string "Paragraphe11"
-    t.string "Paragraphe12"
-    t.string "Paragraphe13"
-    t.string "Paragraphe14"
-    t.string "Paragraphe15"
-    t.string "Paragraphe16"
-    t.string "Paragraphe17"
-    t.string "Paragraphe18"
-    t.string "Paragraphe19"
-    t.string "Paragraphe20"
     t.string "status"
     t.float "latitude"
     t.float "longitude"
-    t.string "address"
-    t.string "city"
-    t.string "auteur"
-    t.string "engagement"
-    t.integer "place"
-    t.date "publication"
     t.index ["library_id"], name: "index_articles_on_library_id"
     t.index ["newspaper_id"], name: "index_articles_on_newspaper_id"
   end

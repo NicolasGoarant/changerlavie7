@@ -7,7 +7,7 @@ class NewspapersController < ApplicationController
   end
 
   def index
-    @articles = Article.published.geocoded.order("publication DESC")
-    @markers = @articles.as_json(only: [:longitude, :latitude])
+    @articles = Article.geocoded.order("publication DESC")
+    @markers = @articles.as_json(only:[:id, :title, :latitude, :longitude], methods: [:properties])
   end
 end

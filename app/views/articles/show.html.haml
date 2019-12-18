@@ -11,7 +11,7 @@
       .col-12
         %h3.my-4 Idée ➔ #{@article.engagement}
   .container.pb-5
-    = @article.content.html_safe
+    = @article.content.try(:html_safe)
     %small.text-muted
       publié le
       = @article.publication.strftime("%d/%m/Y")

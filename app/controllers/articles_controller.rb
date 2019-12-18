@@ -3,7 +3,8 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
     @articles = Article.geocoded.where(id: @article)
-    @markers = @articles.as_json(only: [:longitude, :latitude])
+
+    @markers = @articles.as_json(only:[:id, :title, :latitude, :longitude], methods: [:properties])
   end
 
   def index

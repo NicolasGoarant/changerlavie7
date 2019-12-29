@@ -1,13 +1,18 @@
 #article.card-trip
   = cl_image_tag @article.photo
-  .boutons_article= link_to "Supprimer", article_path, class: "bouton4", method: :delete
+  - if @article.status == "ouvert"
+    .boutons_article= link_to "Ajouter à ma bibliothèque", library_path, class: "bouton4"
+  - else
+    .boutons_article= link_to "Ôter de ma bibliothèque", library_path, class: "bouton4"
   .bloc-auteur
     = cl_image_tag @article.media, class: "media"
     %p= @article.auteur
   .container
     .row
       .col-12
-        %h2.mt-5= @article.title
+        %h5.my-2= @article.publication
+      .col-12
+        %h2.mt-4= @article.title
       .col-12
         %h3.my-4 Idée ➔ #{@article.engagement}
   .container.pb-5

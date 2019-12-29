@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
     @articles = Article.geocoded.where(id: @article)
-
+    @library = @article.library
     @markers = @articles.as_json(only:[:id, :title, :latitude, :longitude], methods: [:properties])
   end
 
@@ -34,6 +34,7 @@ class ArticlesController < ApplicationController
 
   def set_newspaper
     @newspaper = Newspaper.find(params[:newspaper_id])
+
   end
 
 

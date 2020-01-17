@@ -18,4 +18,49 @@
   left: -2px;
 }
 
+.slogan {
+  line-height: 1px;
+  font-size: 25px;
+  font-style: times;
+  color: #138A36;
+  font-weight: bold;
+  font-style: italic;
+  word-spacing: 8px;
+  padding-top: 10px;
+  padding-left: 30px
+}
 
+.slogan p {
+  font-size: 13px;
+}
+
+
+.sloganbis {
+  line-height: 1px;
+  font-size: 25px;
+  font-style: times;
+  color: #138A36;
+  font-weight: bold;
+  font-style: italic;
+  word-spacing: 8px;
+  padding-top: 10px;
+  padding-left: 30px
+}
+
+.sloganbis p {
+  line-height: 1px;
+  font-size: 15px;
+  font-style: times;
+  color: #34403A;
+  font-weight: bold;
+  word-spacing: 4px;
+  padding-left: 17px
+}
+
+
+.navbarlogos {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+}

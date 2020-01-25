@@ -19,7 +19,7 @@
     = @article.content.try(:html_safe)
     %small.text-muted
       publié le
-      = @article.publication.strftime("%d/%m/Y")
+      = @article.publication
       - if @article.auteur.present?
         par
         = @article.auteur

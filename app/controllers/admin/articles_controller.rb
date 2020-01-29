@@ -1,6 +1,7 @@
 class Admin::ArticlesController < ApplicationController
   layout "/admin/application"
 
+
   def new
     @article = Article.new
   end

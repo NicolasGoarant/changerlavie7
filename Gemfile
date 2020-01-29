@@ -21,6 +21,12 @@ gem 'webpacker'
 # gem 'mini_racer', platforms: :ruby
 gem 'devise'
 # Use CoffeeScript for .coffee assets and views
+
+source 'https://rubygems.org'
+gem 'nokogiri'
+gem 'rack', '~> 2.0.1'
+gem 'rspec'
+
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'

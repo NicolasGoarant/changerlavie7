@@ -41,14 +41,11 @@
 
   .mt-3
     %label Journal
-    / %br= f.select :newspaper_id, Newspaper.all.map { |np| ["Journal #{np.id}", np.id]}
-    = f.text_field :journal, class: "form-control"
-
+    %br= f.select :newspaper_id, Newspaper.all.map { |np| ["Journal #{np.id}", np.id]}
 
   .mt-3
     %label Library
-    / %br= f.select :library_id, Library.all.map { |lb| ["Bibliothèque #{lb.id}", lb.id]}
-    = f.text_field :library, class: "form-control"
+    %br= f.select :library_id, Library.all.map { |lb| ["Bibliothèque #{lb.id}", lb.id]}
 
 
 

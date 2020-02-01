@@ -1,15 +1,31 @@
 <% content_for :meta_title %>
 <% content_for :meta_description %>
 <% content_for :meta_image %>
-
-<div class="arrierefond">
-    <%= image_tag "changerlavie.png", alt: "alttext", height: 60, class: "logo" %>
-    <div class="texte">
-      <p>L'information qui</p>
-      <p>étonne</p>
-      <p>éclaire</p>
-      <p>entraîne</p>
+<div class="container fondcontainer">
+    <div class="row justify-content-center">
+      <div class="logoquater">
+        <%= image_tag "changerlavie.png", class: "logo" %>
+      </div>
     </div>
-    <%= link_to "SE CONNECTER", newspapers_path, class: "bouton1" %>
-    <%= link_to "S'INSCRIRE", new_user_registration_path, class: "bouton2" %>
+
+    <div class="row justify-content-center">
+        <div class="textebis">
+          <p><b>L'information qui</b></p>
+          <p><b>étonne</b></p>
+          <p><b>éclaire</b></p>
+          <p><b>entraîne</b></p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="bouton1bis">
+         <%= link_to "SE CONNECTER", newspapers_path, class: "bouton1" %>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="bouton2bis">
+       <%= link_to "S'INSCRIRE", new_user_registration_path, class: "bouton2" %>
+      </div>
+    </div>
 </div>

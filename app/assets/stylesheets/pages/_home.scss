@@ -1,19 +1,68 @@
 // Specific CSS for your home-page
-.arrierefond {
-width: 345px;
-height: 667px;
-background: #18FF6D;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-z-index: 2;
-position: sticky;
+// .arrierefond {
+// width: 345px;
+// height: 667px;
+// background: #18FF6D;
+// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+// z-index: 2;
+// position: sticky;
+// display: flex;
+// justify-content: center;
 
+//   .texte {
+//   position: absolute;
+//   width: 275px;
+//   height: 137px;
+//   font-family: Prosto One;
+//   font-style: bold;
+//   font-weight: normal;
+//   font-size: 26px;
+//   line-height: 32px;
+//   text-align: center;
+//   color: #FFFFFF;
+
+//     p {
+//       line-height: 15px;
+//       font-family: Purisa;
+//       font-weight: bold;
+//       font-size: 26px;
+//     }
+//   }
+// }
+
+
+.logo {
+width: 210px;
+height: 90px;
+background: url(changerlavie.png);
+border-radius: 45px;
+}
+
+.logoquater {
+  padding-top: 50px;
+}
+
+.arriere-fond {
+background-color: #18FF6D;
+}
+
+.textebis {
+  padding-top: 50px;
+
+  p {
+    font-family: Prosto One;
+    font-style: bold;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+}
 
   .bouton1 {
-  position: absolute;
   width: 175px;
   height: 68px;
-  left: 91px;
-  top: 475px;
   background: #138A36;
   border-radius: 45px;
   color: white;
@@ -24,11 +73,8 @@ position: sticky;
   }
 
   .bouton2 {
-  position: absolute;
   width: 175px;
   height: 68px;
-  left: 91px;
-  top: 566px;
   background: #138A36;
   border-radius: 45px;
   color: white;
@@ -38,38 +84,28 @@ position: sticky;
   font-weight: bold;
   }
 
-a.bouton1:hover
+.bouton1:hover
 {
 text-decoration: none;
 color: #18FF6D;
 }
 
-a.bouton2:hover
+.bouton2:hover
 {
 text-decoration: none;
 color: #18FF6D;
 }
 
-  .texte {
-  position: absolute;
-  width: 275px;
-  height: 137px;
-  left: 47px;
-  top: 250px;
-  font-family: Prosto One;
-  font-style: bold;
-  font-weight: normal;
-  font-size: 26px;
-  line-height: 32px;
-  text-align: center;
-  color: #FFFFFF;
-
-    p {
-      line-height: 15px;
-      font-family: Purisa;
-      font-weight: bold;
-      font-size: 26px;
-    }
-  }
+.bouton1bis {
+  padding-top: 100px;
+  padding-bottom: 20px
 }
 
+.bouton2bis {
+  padding-top: 10px;
+  padding-bottom: 30px
+}
+
+.fondcontainer {
+  background-color: #18FF6D;
+}

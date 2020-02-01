@@ -1,43 +1,48 @@
-<% @articles.each do |article|  %>
-  <% if article.publication > Time.at(1546337373) %>
-      <div class="card-trip">
-       <%= cl_image_tag article.photo %>
-        <div class="card-trip-infos">
-          <a href= <%= article_path(article) %> >
-            <div>
-              <h2> <%= article.title %> </h2>
-              <h4><%= article.publication %></h4>
-              <h4> <%= article.auteur %></h4>
-              <p> <%= article.summary %></p>
-               <h3><strong> Idée ➔ <%= article.engagement %></strong></h3>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <% @articles.each do |article|  %>
+        <% if article.publication > Time.at(1546337373) %>
+            <div class="card-trip">
+             <%= cl_image_tag article.photo %>
+              <div class="card-trip-infos">
+                <a href= <%= article_path(article) %> >
+                  <div>
+                    <h2> <%= article.title %> </h2>
+                    <h4><%= article.publication %></h4>
+                    <h4> <%= article.auteur %></h4>
+                    <p> <%= article.summary %></p>
+                     <h3><strong> Idée ➔ <%= article.engagement %></strong></h3>
+                  </div>
+                </a>
+                 <%= cl_image_tag article.media, class: "card-trip-user avatar-bordered" %>
+              </div>
             </div>
-          </a>
-           <%= cl_image_tag article.media, class: "card-trip-user avatar-bordered" %>
-        </div>
-      </div>
-    <% else %>
-       <div class="card-product">
-       <%= cl_image_tag article.photo %>
-        <div class="card-product-infos">
-          <a href= <%= article_path(article) %> >
-           <div>
-              <h2> <%= article.title %> </h2>
-              <p> <%= article.summary %></p>
-           </div>
-          </a>
-        </div>
-      </div>
-  <% end %>
-<% end %>
+          <% else %>
+             <div class="card-product">
+             <%= cl_image_tag article.photo %>
+              <div class="card-product-infos">
+                <a href= <%= article_path(article) %> >
+                 <div>
+                    <h2> <%= article.title %> </h2>
+                    <p> <%= article.summary %></p>
+                 </div>
+                </a>
+              </div>
+            </div>
+        <% end %>
+      <% end %>
 
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+      <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
 
-<div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="pk.eyJ1IjoiYWdnb2xmZSIsImEiOiJjazE3dDc3amYxZmlkM2xwM29jZGp2dmNiIn0.dZFTZnFgD91_YL9rarsVlw"
-></div>
-
+      <div
+        id="map"
+        style="width: 100%;
+        height: 600px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="pk.eyJ1IjoiYWdnb2xmZSIsImEiOiJjazE3dDc3amYxZmlkM2xwM29jZGp2dmNiIn0.dZFTZnFgD91_YL9rarsVlw"
+      ></div>
+    </div>
+  </div>
+</div>

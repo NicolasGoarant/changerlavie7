@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_13_154435) do
+ActiveRecord::Schema.define(version: 2019_11_18_093321) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -18,39 +21,19 @@ ActiveRecord::Schema.define(version: 2019_12_13_154435) do
     t.string "photo"
     t.string "media"
     t.string "content"
-    t.integer "library_id"
-    t.integer "newspaper_id"
+    t.string "city"
+    t.string "address"
+    t.string "auteur"
+    t.string "engagement"
+    t.string "place"
+    t.string "publication"
+    t.bigint "library_id"
+    t.bigint "newspaper_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "Paragraphe1"
-    t.string "Paragraphe2"
-    t.string "Paragraphe3"
-    t.string "Paragraphe4"
-    t.string "Paragraphe5"
-    t.string "Paragraphe6"
-    t.string "Paragraphe7"
-    t.string "Paragraphe8"
-    t.string "Paragraphe9"
-    t.string "Paragraphe10"
-    t.string "Paragraphe11"
-    t.string "Paragraphe12"
-    t.string "Paragraphe13"
-    t.string "Paragraphe14"
-    t.string "Paragraphe15"
-    t.string "Paragraphe16"
-    t.string "Paragraphe17"
-    t.string "Paragraphe18"
-    t.string "Paragraphe19"
-    t.string "Paragraphe20"
     t.string "status"
     t.float "latitude"
     t.float "longitude"
-    t.string "address"
-    t.string "city"
-    t.string "auteur"
-    t.string "engagement"
-    t.integer "place"
-    t.date "publication"
     t.index ["library_id"], name: "index_articles_on_library_id"
     t.index ["newspaper_id"], name: "index_articles_on_newspaper_id"
   end
@@ -58,7 +41,7 @@ ActiveRecord::Schema.define(version: 2019_12_13_154435) do
   create_table "libraries", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_libraries_on_user_id"
   end
 
@@ -79,4 +62,7 @@ ActiveRecord::Schema.define(version: 2019_12_13_154435) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "articles", "libraries"
+  add_foreign_key "articles", "newspapers"
+  add_foreign_key "libraries", "users"
 end

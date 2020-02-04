@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'pages/contact'
   get 'pages/about'
   devise_for :users
-  root to: 'pages#home'
+  root to: 'newspapers#index'
   resources :libraries do
     resources :articles
   end

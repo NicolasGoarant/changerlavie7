@@ -39,7 +39,7 @@ border-radius: 45px;
 }
 
 .logoquater {
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 .arriere-fond {
@@ -47,14 +47,14 @@ background-color: #18FF6D;
 }
 
 .textebis {
-  padding-top: 50px;
+  padding-top: 10px;
 
   p {
     font-family: Prosto One;
     font-style: bold;
     font-weight: normal;
-    font-size: 26px;
-    line-height: 32px;
+    font-size: 22px;
+    line-height: 22px;
     text-align: center;
     color: #FFFFFF;
   }
@@ -131,7 +131,7 @@ color: #18FF6D;
 }
 
 .form-actions {
-  padding-bottom: 120px;
+  padding-bottom: 15px;
 }
 
 .form-actions2 {
@@ -150,4 +150,8 @@ color: #18FF6D;
   padding-top: 10px;
   padding-bottom: 20px;
   color: white;
+}
+
+.boutonvalider {
+  padding-bottom: 40px;
 }

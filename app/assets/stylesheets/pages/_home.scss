@@ -63,7 +63,7 @@ background-color: #18FF6D;
   .bouton1 {
   width: 175px;
   height: 68px;
-  background: #138A36;
+  background: #04E824;
   border-radius: 45px;
   color: white;
   display: flex;
@@ -108,4 +108,36 @@ color: #18FF6D;
 
 .fondcontainer {
   background-color: #18FF6D;
+}
+
+.fondcontainerlogo {
+  background-color: #18FF6D;
+  justify-content: center;
+  display: flex;
+}
+
+.titre-se-connecter {
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.form-inputs {
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+}
+
+.form-actions {
+  padding-top: 110px;
+  padding-bottom: 20px;
+}
+
+.mot-de-passe-oublie {
+  display: inline-block;
+  text-align: center;
+  padding-bottom: 5px;
+
 }

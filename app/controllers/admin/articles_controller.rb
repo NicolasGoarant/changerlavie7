@@ -1,6 +1,6 @@
 class Admin::ArticlesController < ApplicationController
   layout "/admin/application"
-
+  before_action :user_is_admin
 
   def new
     @article = Article.new
@@ -8,11 +8,11 @@ class Admin::ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    if @article.save
-      redirect_to edit_admin_article_path(@article), notice: "Article sauvegardé avec succès."
-    else
-      render :new
-    end
+      if @article.save
+        redirect_to edit_admin_article_path(@article), notice: "Article sauvegardé avec succès."
+      else
+        render :new
+      end
   end
 
   def edit
@@ -53,5 +53,13 @@ class Admin::ArticlesController < ApplicationController
 
   def article_params
     params.require(:article).permit(:title, :newspaper_id, :summary, :photo, :media, :content, :address, :engagement, :publication, :auteur)
+  end
+
+  def user_is_admin
+   @user = current_user
+
+    if @user.email != "nicolas.goarant@gmail.com"
+    redirect_to newspapers_path
+    end
   end
 end

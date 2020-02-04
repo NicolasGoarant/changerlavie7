@@ -131,13 +131,23 @@ color: #18FF6D;
 }
 
 .form-actions {
-  padding-top: 110px;
-  padding-bottom: 20px;
+  padding-bottom: 120px;
+}
+
+.form-actions2 {
+  padding-bottom: 189px;
+  display: inline-block;
+  align-items: center;
 }
 
 .mot-de-passe-oublie {
   display: inline-block;
   text-align: center;
   padding-bottom: 5px;
+}
 
+.nouvel_utilisateur {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color: white;
 }

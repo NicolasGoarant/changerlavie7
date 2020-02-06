@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'newspapers#index'
   resources :libraries do
-    resources :articles
-  end
+      resources :articles
+    end
+
   resources :newspapers
   resources :articles
 

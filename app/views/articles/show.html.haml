@@ -3,9 +3,9 @@
     #article.card-trip
       = cl_image_tag @article.photo
       - if @article.status == "ouvert"
-        .boutons_article= link_to "Ajouter à ma bibliothèque", library_path, method: :patch, class: "bouton4"
+        .boutons_article= link_to "Ajouter à ma bibliothèque", admin_library_path, method: :patch, class: "bouton4"
       - else
-        .boutons_article= link_to "Ôter de ma bibliothèque", library_path, method: :patch, class: "bouton4"
+        .boutons_article= link_to "Ôter de ma bibliothèque", admin_library_path, method: :patch, class: "bouton4"
       .bloc-auteur
         = cl_image_tag @article.media, class: "media"
       .container

@@ -10,7 +10,7 @@ class LibrariesController < ApplicationController
   end
 
   def update
-    @article = Article.find(params[:id])
+      @article = Article.find(params[:id])
     if @article.status == "ouvert"
      @article.update(status: "approved")
     else

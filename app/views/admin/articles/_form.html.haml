@@ -9,6 +9,10 @@
     = f.text_field :auteur, class: "form-control"
 
   .mt-3
+    %label Summary
+    = f.text_field :summary, class: "form-control"
+
+  .mt-3
     %label Date de publication
     = f.text_field :publication, class: "datepicker form-control",
                                   value: @article.publication.try(:strftime,"%d/%m/%Y") || Time.current.strftime("%d/%m/%Y"),

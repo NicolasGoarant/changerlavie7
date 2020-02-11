@@ -44,14 +44,6 @@
     %br= f.select :newspaper_id, Newspaper.all.map { |np| ["Journal #{np.id}", np.id]}
 
   .mt-3
-    %label Library
-    %br= f.select :library_id, Library.all.map { |lb| ["Bibliothèque #{lb.id}", lb.id]}
-
-
-
-
-
-  .mt-3
     = f.submit "Ajouter cet article", class: "btn btn-primary"
     - if @article.persisted?
       ou

@@ -1,9 +1,9 @@
 class ArticlesController < ApplicationController
+  before_action :set_library
 
   def show
     @article = Article.find(params[:id])
     @articles = Article.geocoded.where(id: @article)
-    @library = @article.library
     @markers = @articles.as_json(only:[:id, :title, :latitude, :longitude], methods: [:properties])
   end
 
@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
-   @article = Article.new
+    @article = Article.new
   end
 
   def create
@@ -32,10 +32,9 @@ class ArticlesController < ApplicationController
     redirect_to newspapers_path
   end
 
-  def set_newspaper
-    @newspaper = Newspaper.find(params[:newspaper_id])
-
+  def set_library
+    @article = Article.find(params[:id])
+    @library = current_user.library_ids
   end
-
 
 end

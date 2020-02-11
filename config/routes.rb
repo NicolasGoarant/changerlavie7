@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'pages/contact'
   get 'pages/about'
   devise_for :users
-  root to: 'libraries#create_library'
+  root to: 'newspapers#index'
   resources :libraries do
       resources :articles
     end
@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: 'articles#index'
     resources :articles
-    resources :libraries, only: [:index, :show, :create]
+    resources :libraries, only: [:index, :show, :create, :update]
   end
 end

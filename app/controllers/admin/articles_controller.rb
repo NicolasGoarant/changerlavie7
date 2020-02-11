@@ -1,6 +1,7 @@
 class Admin::ArticlesController < ApplicationController
   layout "/admin/application"
   before_action :user_is_admin
+  before_action :set_library
 
   def new
     @article = Article.new
@@ -45,14 +46,12 @@ class Admin::ArticlesController < ApplicationController
     end
   end
 
-  def set_library
-    @library = Library.find(params[:library_id])
-  end
+
 
   private
 
   def article_params
-    params.require(:article).permit(:title, :newspaper_id, :summary, :photo, :media, :content, :address, :engagement, :publication, :auteur)
+    params.require(:article).permit(:title, :newspaper_id, :summary, :photo, :media, :content, :address, :engagement, :publication, :auteur, :status)
   end
 
   def user_is_admin
@@ -61,5 +60,9 @@ class Admin::ArticlesController < ApplicationController
     if @user.email != "nicolas.goarant@gmail.com"
     redirect_to newspapers_path
     end
+  end
+
+  def set_library
+    @library = current_user.library_ids
   end
 end

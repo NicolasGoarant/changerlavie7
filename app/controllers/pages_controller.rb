@@ -3,5 +3,6 @@ class PagesController < ApplicationController
   end
 
   def about
+    @library = current_user.library_ids
   end
 end

@@ -26,7 +26,6 @@ class Admin::LibrariesController < ApplicationController
     @user = current_user
     @article = Article.find(params[:id])
     @library = @article.library
-    @user = current_user
   end
 end
 

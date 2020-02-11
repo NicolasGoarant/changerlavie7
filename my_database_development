@@ -1,0 +1,1 @@
+SELECT setval(pg_get_serial_sequence('users', 'id'), coalesce(max(id),1), false) FROM users;

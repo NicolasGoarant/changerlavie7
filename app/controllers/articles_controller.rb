@@ -1,9 +1,28 @@
 class ArticlesController < ApplicationController
+  layout "/application"
+  before_action :user_is_admin
   before_action :set_library
 
-  def show
-    @library = current_user.library_ids
+  def new
+    @article = Article.new
+  end
 
+  def create
+    @article = Article.new(article_params)
+      if @article.save
+        redirect_to edit_article_path(@article), notice: "Article sauvegardé avec succès."
+      else
+        render :new
+      end
+  end
+
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  def show
+    @article = Article.find(params[:id])
+    @library = current_user.library_ids
     @articles = Article.geocoded.where(id: @article)
     @markers = @articles.as_json(only:[:id, :title, :latitude, :longitude], methods: [:properties])
   end
@@ -20,21 +39,21 @@ class ArticlesController < ApplicationController
     redirect_to newspapers_path
   end
 
-  def new
-    @article = Article.new
+  private
+
+  def article_params
+    params.require(:article).permit(:title, :newspaper_id, :summary, :photo, :media, :content, :address, :engagement, :publication, :auteur, :status)
   end
 
-  def create
-    @article = Article.new(article_params)
-    @newspaper = Newspaper.find(params[:newspaper_id])
-    @article.newspaper = @newspaper
-    @article.save
-    flash[:notice] = "Article ajouté ! Merci !"
+  def user_is_admin
+   @user = current_user
+
+    if @user.email != "nicolas.goarant@gmail.com"
     redirect_to newspapers_path
+    end
   end
 
   def set_library
-    @article = Article.find(params[:id])
+    @library = current_user.library_ids
   end
-
 end

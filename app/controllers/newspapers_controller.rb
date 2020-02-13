@@ -1,20 +1,6 @@
 class NewspapersController < ApplicationController
   before_action :set_library
 
-  def create
-  @library = current_user.library_ids
-    if @library.empty?
-       @library = Library.new
-       @library.user = current_user
-       @library.save
-    else
-      @library = current_user.library_ids
-
-    end
-  redirect_to newspapers_path
-
-  end
-
   def index
     @articles = Article.geocoded.order("publication DESC")
     @markers = @articles.as_json(only:[:id, :title, :latitude, :longitude], methods: [:properties])
@@ -27,6 +13,9 @@ class NewspapersController < ApplicationController
   end
 
   def set_library
-    @library = current_user.library_ids
+        @library = Library.new
+        @user = current_user
+        @library.user_id = @user
+        @library.save
   end
 end

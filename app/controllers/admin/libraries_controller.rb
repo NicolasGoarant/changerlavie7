@@ -6,18 +6,6 @@ class Admin::LibrariesController < ApplicationController
     @markers = @articles.as_json(only:[:id, :title, :latitude, :longitude], methods: [:properties])
   end
 
-
-  def create
-    if current_user.library_ids.empty?
-      @library = Library.new
-      @library.user = current_user
-      @library.save
-    else
-      @library = current_user.library_ids
-    end
-  redirect_to newspapers_path
-  end
-
   def update
     @article = Article.find(params[:article_id])
     @library = Library.find(params[:id])

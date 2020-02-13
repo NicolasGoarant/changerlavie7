@@ -39,11 +39,10 @@ class Admin::ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-    if @article.update_attributes(article_params)
-      redirect_to edit_admin_article_path(@article), notice: "Article sauvegardé"
-    else
-      redirect_to edit_admin_article_path(@article), notice: "Erreur lors de la sauvegarde"
-    end
+    @library.update(article_id: @article)
+    @library.save
+
+  redirect_to admin_library_path(@library)
   end
 
 

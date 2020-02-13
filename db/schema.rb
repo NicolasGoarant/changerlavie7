@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_18_093321) do
+ActiveRecord::Schema.define(version: 2020_02_13_075210) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,8 @@ ActiveRecord::Schema.define(version: 2019_11_18_093321) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.bigint "article_id"
+    t.index ["article_id"], name: "index_libraries_on_article_id"
     t.index ["user_id"], name: "index_libraries_on_user_id"
   end
 
@@ -64,5 +66,6 @@ ActiveRecord::Schema.define(version: 2019_11_18_093321) do
 
   add_foreign_key "articles", "libraries"
   add_foreign_key "articles", "newspapers"
+  add_foreign_key "libraries", "articles"
   add_foreign_key "libraries", "users"
 end

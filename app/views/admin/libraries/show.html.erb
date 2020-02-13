@@ -2,6 +2,7 @@
   <div class="row-fluid">
     <div class="titlelibrary">
     <h3><b>Ma bibliothèque</b></h3>
+    <%= @library %>
     </div>
       <% if @articles.empty? %>
         <%= image_tag "library.png", class: "bibliotheque_vide" %>

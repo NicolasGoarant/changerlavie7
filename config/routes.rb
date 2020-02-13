@@ -5,14 +5,17 @@ Rails.application.routes.draw do
   root to: 'newspapers#index'
   resources :libraries do
       resources :articles
-    end
+  end
 
   resources :newspapers
-  resources :articles
+  resources :articles do
+    resources :libraries, only: [:update]
+  end
 
   namespace :admin do
     root to: 'articles#index'
-    resources :articles
-    resources :libraries, only: [:index, :show, :create, :update]
+    resources :articles do
+       resources :libraries, only: [:index, :show, :create, :update]
+    end
   end
 end

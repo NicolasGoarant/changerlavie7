@@ -2,7 +2,8 @@ class ArticlesController < ApplicationController
   before_action :set_library
 
   def show
-    @article = Article.find(params[:id])
+    @library = current_user.library_ids
+
     @articles = Article.geocoded.where(id: @article)
     @markers = @articles.as_json(only:[:id, :title, :latitude, :longitude], methods: [:properties])
   end
@@ -34,7 +35,6 @@ class ArticlesController < ApplicationController
 
   def set_library
     @article = Article.find(params[:id])
-    @library = current_user.library_ids
   end
 
 end

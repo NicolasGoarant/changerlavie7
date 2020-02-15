@@ -8,18 +8,12 @@ puts "Creating Users..."
 user = User.create!(
   email: "nicolas.goarant@gmail.com",
   password: "secret",
-  id: 1,
   )
 
 puts "Creating Newspapers..."
 newspaper = Newspaper.create!(
   id: 1,
   )
-
-puts "Creating Libraries..."
-library = Library.create!(
-  id: 1,
-  user_id: 1,)
 
 puts "Creating Articles..."
 article_1 = Article.create!(

@@ -16,14 +16,23 @@ class ArticlesController < ApplicationController
       end
   end
 
+  def update
+    @article = Article.find(params[:id])
+    @library = Library.find(params[:library_id])
+    @article.library_id = 1
+    @article.save
+
+    redirect_to library_path(@library)
+  end
+
   def edit
     @article = Article.find(params[:id])
   end
 
   def show
+
     @article = Article.find(params[:id])
-    @library = current_user.library_ids
-    @articles = Article.geocoded.where(id: @article)
+    # @articles = Article.geocoded.where(id: @article)
     @markers = @articles.as_json(only:[:id, :title, :latitude, :longitude], methods: [:properties])
   end
 

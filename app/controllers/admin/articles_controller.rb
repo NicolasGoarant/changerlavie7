@@ -3,16 +3,24 @@ class Admin::ArticlesController < ApplicationController
   before_action :user_is_admin
   before_action :set_library
 
-  def new
-    @article = Article.find(params[:id])
-    @article_modified = Article.new
-    @article_modified = @article
-    @article_modified_library_id = @library
-    @article.save
-    redirect_to library_path(@library)
+  def create
+       @article = Article.new(article_params)
+      if @article.save
+        redirect_to newspapers_path, notice: "Article sauvegardé avec succès."
+      else
+        render :new
+      end
+
+
+    # @article = Article.find(params[:id])
+    # @article_modified = Article.new
+    # @article_modified = @article
+    # @article_modified_library_id = @library
+    # @article.save
+    # redirect_to library_path(@library)
   end
 
-  def create
+  def new
     @article = Article.new
 
   end

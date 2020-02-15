@@ -4,12 +4,6 @@ Library.destroy_all
 Newspaper.destroy_all
 User.destroy_all
 
-puts "Creating Users..."
-user = User.create!(
-  email: "nicolas.goarant@gmail.com",
-  password: "secret",
-  )
-
 puts "Creating Newspapers..."
 newspaper = Newspaper.create!(
   id: 1,

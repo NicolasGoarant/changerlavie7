@@ -5,13 +5,12 @@ class Admin::ArticlesController < ApplicationController
 
   def create
        @article = Article.new(article_params)
+
       if @article.save
-        redirect_to newspapers_path, notice: "Article sauvegardé avec succès."
+        redirect_to admin_articles_path, notice: "Article sauvegardé avec succès."
       else
         render :new
       end
-
-
     # @article = Article.find(params[:id])
     # @article_modified = Article.new
     # @article_modified = @article
@@ -22,7 +21,6 @@ class Admin::ArticlesController < ApplicationController
 
   def new
     @article = Article.new
-
   end
 
   def edit
@@ -47,9 +45,10 @@ class Admin::ArticlesController < ApplicationController
   end
 
   def update
-
-
-  redirect_to library_path(@library)
+    @article = Article.find(params[:id])
+    @article.update(article_params)
+    @article.save
+    redirect_to admin_articles_path
   end
 
 

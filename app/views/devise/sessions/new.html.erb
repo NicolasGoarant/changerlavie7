@@ -1,11 +1,11 @@
-<div class="container-fluid fondcontainer col-md-6 col-sm-6 col-lg-6">
-  <div class="row justify-content-center">
+<div class="container-fluid fondcontainer col-md-6 col-sm-6 col-lg-8 pb-lg-5">
+  <div class="row justify-content-center pb-lg-5">
     <div class="logoquater">
       <%= image_tag "changerlavie.png", class: "logo" %>
     </div>
   </div>
 
-    <div class="row justify-content-center">
+    <div class="row justify-content-center pb-lg-5">
         <div class="textebis">
           <p><b>Les informations qui</b></p>
           <p><b>étonnent</b></p>
@@ -28,7 +28,7 @@
     </div>
   </div>
 
-  <div class="row justify-content-center">
+  <div class="row justify-content-center pb-lg-5">
        <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
         <%= link_to "Mot de passe oublié", new_password_path(resource_name), style: "color: #138A36; font-weight: bold; padding-bottom: 10px; top: -5px;" %><br />
        <% end %>

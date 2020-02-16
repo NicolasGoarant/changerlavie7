@@ -18,7 +18,7 @@ const addMarkersToMap = (map, markers) => {
     new mapboxgl.Marker()
       .setLngLat([ marker.longitude, marker.latitude ])
       .setPopup(new mapboxgl.Popup({ offset: 25, anchor: 'top' })
-      .setHTML('<a target="_blank" href="'+ marker.properties.url + '"><b>' + marker.properties.title + '</b><br/><img class="mt-4 img-fluid" src='+ marker.properties.img + ' /><p>' + marker.properties.content + '</p></a>'))
+      .setHTML('<a target="_blank" href="'+ marker.properties.url + '"><b>' + marker.properties.title + '</b><br/><img class="mt-4 img-fluid" src='+ marker.properties.img + ' /><p>' + marker.properties.summary + '</p></a>'))
       .addTo(map);
   });
 };

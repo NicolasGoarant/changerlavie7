@@ -7,7 +7,6 @@
   h3{ font-size: 1.5rem; font-weight: bold; color: #285238;}
 }
 
-
 .marker { background-image: asset-url('bluepin.png');
   background-size: cover;
   width: 32px;
@@ -23,6 +22,29 @@
 .mapboxgl-popup-content {
   text-align: center;
   font-size: 1rem;
-  color: #000;
+  color: red;
   font-family: 'Open Sans', sans-serif;
+}
+
+.mapboxgl-popup-content b {
+  color: #138A36;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.mapboxgl-popup-content p {
+  text-align: justify;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.mapboxgl-popup-content:hover b {
+  color: blue;
+}
+
+.mapboxgl-popup-content:hover p {
+  color: blue;
+}
+
+.mapboxgl-popup-content:hover a {
+  text-decoration: none;
 }

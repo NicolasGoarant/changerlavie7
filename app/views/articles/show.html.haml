@@ -2,7 +2,10 @@
   .row-fluid
     #article.card-trip
       = cl_image_tag @article.photo
-      .boutons_article= link_to "Ajouter à ma bibliothèque", library_article_path(@library, @article), method: :patch, class: "bouton4"
+      - if @article.library_id.nil?
+        .boutons_article= link_to "Ajouter à ma bibliothèque", article_path(@article), method: :patch, class: "bouton4"
+      - else
+        .boutons_article= link_to "Ôter de ma bibliothèque", article_path(@article), method: :patch, class: "bouton4"
       .bloc-auteur
         = cl_image_tag @article.media, class: "media"
       .container

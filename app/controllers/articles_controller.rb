@@ -4,32 +4,31 @@ class ArticlesController < ApplicationController
   before_action :set_library
 
   def update
-    @article = Article.find(params[:id])
-    @library = Library.find(params[:library_id])
-    @article.library = @library
-    @article.save
+    if @article.library_id == nil
+      @article.update(library_id: @library[0])
+      @article.save
+    else
+      @article.update(library_id: nil)
+      @article.save
+    end
 
     redirect_to library_path(@library)
   end
 
   def edit
-    @article = Article.find(params[:id])
   end
 
   def show
-    @article = Article.find(params[:id])
     # @articles = Article.geocoded.where(id: @article)
     @markers = @articles.as_json(only:[:id, :title, :latitude, :longitude], methods: [:properties])
   end
 
   def index
-    @article = Article.find(params[:id])
     @articles = Article.geocoded
     @markers = @articles.map { |a| { lat: a.longitude, lng: a.latitude } }
   end
 
   def destroy
-    @article = Article.find(params[:id])
     @article.destroy
     redirect_to newspapers_path
   end
@@ -49,6 +48,7 @@ class ArticlesController < ApplicationController
   end
 
   def set_library
+    @article = Article.find(params[:id])
     @library = current_user.library_ids
   end
 end

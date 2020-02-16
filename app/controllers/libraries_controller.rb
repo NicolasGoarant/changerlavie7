@@ -17,13 +17,4 @@ class LibrariesController < ApplicationController
     @markers = @articles.as_json(only:[:id, :title, :latitude, :longitude], methods: [:properties])
   end
 
-  def update
-    @article = Article.find(params[:id])
-    @library = Library.find(params[:library_id])
-    @article.update
-    @article.save
-
-    redirect_to library_path(@library)
-
-  end
 end

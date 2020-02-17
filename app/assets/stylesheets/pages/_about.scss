@@ -3,6 +3,8 @@
   padding-left: 20px;
   padding-right: 20px;
   background-color: white;
+  min-height: 100%;
+  weight: 100%;
 }
 
  .title {
@@ -14,6 +16,8 @@
 
   .explications {
   text-align: justify;
+  min-height: 100%;
+  weight: 100%;
   }
 
   .explications h6 {

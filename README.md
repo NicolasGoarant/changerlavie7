@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to root_path, class: "navbar-brand" do %>
-<!--     <%= image_tag "logoclv.jpeg" %> -->
+<!--     <%= image_tag "changerlavie.png" %> -->
   <% end %>
     <div class="slogan">
     <p>&Eacutetonner  &Eacuteclairer  Entraîner</p>

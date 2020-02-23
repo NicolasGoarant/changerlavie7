@@ -2,23 +2,8 @@ class ArticlesController < ApplicationController
   layout "/application"
   before_action :set_library
 
-  #   def create
-  #   #  @article = Article.new(article_params)
-  #   # if @article.save
-  #   #   redirect_to newspapers_path, notice: "Article sauvegardé avec succès."
-  #   # else
-  #   #   render :new
-  #   # end
-
-  #           @article = Article.find(params[:id])
-  #   @article_modified = Article.new
-  #   @article_modified = @article
-  #   @article_modified_library_id = @library
-  #   @article.save
-  #   redirect_to library_path(@library)
-  # end
-
   def new
+    @library = current_user
     @user = current_user
     if @user.email != "nicolas.goarant@gmail.com"
     redirect_to newspapers_path
@@ -28,21 +13,28 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-    if @article.library_id == nil
-      @article.update(library_id: @library[0])
-      @article.save
-    else
-      @article.update(library_id: nil)
-      @article.save
-    end
+    @array = []
+    @array = @article.library_ids
+      if   @array.empty?
+           @array << 3
 
-    redirect_to library_path(@library)
+      else @array.each do |library|
+              if library.to_i != @library[:id]
+                @array << 3
+              else  library.to_i == nil
+              end
+           end
+      end
+    @article.save
+    redirect_to newspapers_path
+
   end
 
   def edit
   end
 
   def show
+    @library = current_user
     @article = Article.find(params[:id])
     @articles = Article.geocoded.where(id: @article)
     @markers = @articles.as_json(only:[:id, :summary, :title, :latitude, :longitude], methods: [:properties])
@@ -61,22 +53,16 @@ class ArticlesController < ApplicationController
   end
 
 
-
   private
 
   def article_params
     params.require(:article).permit(:title, :newspaper_id, :summary, :photo, :media, :content, :address, :engagement, :publication, :auteur, :status)
   end
 
-  def user_is_admin
-   @user = current_user
-
-    if @user.email != "nicolas.goarant@gmail.com"
-    redirect_to newspapers_path
-    end
-  end
-
   def set_library
-    @library = current_user.library_ids
+    @libraries = Library.where(user_id: current_user)
+    @libraries.each do |library|
+    @library = library
+    end
   end
 end

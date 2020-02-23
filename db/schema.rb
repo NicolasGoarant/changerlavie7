@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_15_184329) do
+ActiveRecord::Schema.define(version: 2020_02_20_194319) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,14 +27,12 @@ ActiveRecord::Schema.define(version: 2020_02_15_184329) do
     t.string "engagement"
     t.string "place"
     t.string "publication"
-    t.bigint "library_id"
     t.bigint "newspaper_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "status"
     t.float "latitude"
     t.float "longitude"
-    t.index ["library_id"], name: "index_articles_on_library_id"
     t.index ["newspaper_id"], name: "index_articles_on_newspaper_id"
   end
 
@@ -42,6 +40,8 @@ ActiveRecord::Schema.define(version: 2020_02_15_184329) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.bigint "article_id"
+    t.index ["article_id"], name: "index_libraries_on_article_id"
     t.index ["user_id"], name: "index_libraries_on_user_id"
   end
 
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 2020_02_15_184329) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "articles", "libraries"
   add_foreign_key "articles", "newspapers"
+  add_foreign_key "libraries", "articles"
   add_foreign_key "libraries", "users"
 end

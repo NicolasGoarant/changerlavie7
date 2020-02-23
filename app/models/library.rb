@@ -1,4 +1,4 @@
 class Library < ApplicationRecord
-  has_many :articles, dependent: :destroy
-  belongs_to :user
+  belongs_to :user, optional: true
+  belongs_to :article, optional: true
 end

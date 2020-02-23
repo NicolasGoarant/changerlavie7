@@ -2,10 +2,13 @@
   .row-fluid
     #article.card-trip
       = cl_image_tag @article.photo
-      - if @article.library_id.nil?
+      - if @article.library_ids.empty?
         .boutons_article= link_to "Ajouter à ma bibliothèque", article_path(@article), method: :patch, class: "bouton4"
-      - else
-        .boutons_article= link_to "Ôter de ma bibliothèque", article_path(@article), method: :patch, class: "bouton4"
+      - @article.library_ids.each do |library|
+        - if library = @library
+          .boutons_article= link_to "Ôter de ma bibliothèque", article_path(@article), method: :patch, class: "bouton4"
+        - else
+          .boutons_article= link_to "Ajouter à ma bibliothèque", article_path(@article), method: :patch, class: "bouton4"
       .bloc-auteur
         = cl_image_tag @article.media, class: "media"
       .container
@@ -16,6 +19,8 @@
             %h5.my-2= @article.publication
           .col-12
             %h2.mt-4= @article.title
+          .col-12
+            %h2.mt-4= @article.library_ids
           .col-12
             %h3.my-4 Idée ➔ #{@article.engagement}
       .container.pb-5

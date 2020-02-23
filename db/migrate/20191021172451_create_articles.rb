@@ -15,7 +15,6 @@ class CreateArticles < ActiveRecord::Migration[5.2]
       t.string :publication
 
 
-      t.references :library, index: true, foreign_key: true
       t.references :newspaper, index: true, foreign_key: true
 
       t.timestamps

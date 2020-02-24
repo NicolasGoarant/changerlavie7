@@ -2,6 +2,8 @@ class NewspapersController < ApplicationController
   before_action :set_library
 
   def index
+    @myarray = Array.new
+    @myarray << 2
     @articles = Article.geocoded.order("publication DESC")
     @markers = @articles.as_json(only:[:id, :summary, :title, :latitude, :longitude], methods: [:properties])
   end

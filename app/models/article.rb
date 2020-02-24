@@ -4,12 +4,15 @@ class Article < ApplicationRecord
 
   belongs_to :newspaper
   has_many :libraries
+  has_many :users
   mount_uploader :photo, PhotoUploader
   mount_uploader :media, PhotoUploader
 
   scope :published, -> { where.not(publication: nil).where("publication > ?", Time.zone.now)}
 
+
   def properties
     {title: title, summary: summary, url: "/articles/#{id}", img: self.try(:photo).try(:url)}
   end
+
 end

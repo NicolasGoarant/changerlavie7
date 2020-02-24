@@ -1,5 +1,6 @@
 <div class="container-fluid col-sm-6 col-centered-md-6 col-centered-lg-6">
   <div class="row-fluid">
+    <%= @myarray %>
       <% @articles.each do |article|  %>
         <% if article.publication > Time.at(1546337373) %>
             <div class="card-trip">

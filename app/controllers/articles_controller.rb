@@ -13,20 +13,20 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-    @array = []
-    @array = @article.library_ids
-      if   @array.empty?
-           @array << 3
+    @myarray = Array.new
+    @myarray = @article.library_ids
 
-      else @array.each do |library|
-              if library.to_i != @library[:id]
-                @array << 3
-              else  library.to_i == nil
-              end
-           end
-      end
-    @article.save
-    redirect_to newspapers_path
+    if @article.library_ids.include?(@library[:id])
+       @myarray.delete(@library[:id])
+       @article.update(library_ids: @myarray)
+       @article.save!
+    else
+       @myarray.push(@library[:id])
+       @article.update(library_ids: @myarray)
+       @article.save!
+    end
+       @article.save!
+    redirect_to article_path(@article)
 
   end
 

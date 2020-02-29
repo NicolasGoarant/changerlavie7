@@ -12,20 +12,18 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    @article = Article.find(params[:id])
     @myarray = Array.new
-    @myarray = @article.library_ids
-
-    if @article.library_ids.include?(@library[:id])
-       @myarray.delete(@library[:id])
-       @article.update(library_ids: @myarray)
-       @article.save!
+    @myarray = @article.user_ids
+    if @myarray.include?(@user[:id])
+       @myarray.delete(@user[:id])
+       @user.save!
     else
-       @myarray.push(@library[:id])
-       @article.update(library_ids: @myarray)
-       @article.save!
+       @myarray.push(@user[:id])
+       @user.save!
     end
-       @article.save!
+
+    @article.update(user_ids: @myarray)
+    @article.save!
     redirect_to article_path(@article)
 
   end
@@ -34,20 +32,15 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @library = current_user
-    @article = Article.find(params[:id])
-    @articles = Article.geocoded.where(id: @article)
-    @markers = @articles.as_json(only:[:id, :summary, :title, :latitude, :longitude], methods: [:properties])
+    @markers = @article.as_json(only:[:id, :summary, :title, :latitude, :longitude], methods: [:properties])
   end
 
-  def index
-    @article = Article.find(params[:id])
-    @articles = Article.geocoded
-    @markers = @articles.map { |a| { lat: a.longitude, lng: a.latitude } }
-  end
+  # def index
+  #   @articles = Article.geocoded
+  #   @markers = @articles.map { |a| { lat: a.longitude, lng: a.latitude } }
+  # end
 
   def destroy
-    @article = Article.find(params[:id])
     @article.destroy
     redirect_to newspapers_path
   end
@@ -60,6 +53,8 @@ class ArticlesController < ApplicationController
   end
 
   def set_library
+    @user = current_user
+    @article = Article.find(params[:id])
     @libraries = Library.where(user_id: current_user)
     @libraries.each do |library|
     @library = library

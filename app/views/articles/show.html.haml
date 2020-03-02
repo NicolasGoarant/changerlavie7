@@ -22,6 +22,12 @@
           .col-12
             %h2.mt-4= @article.user_ids
           .col-12
+            %h2.mt-4= @article.library_ids
+          .col-12
+            %h2.mt-4= @user[:id]
+          .col-12
+            %h3.mt-4= @article.user_ids
+          .col-12
             %h3.my-4 Idée ➔ #{@article.engagement}
       .container.pb-5
         = @article.content.try(:html_safe)

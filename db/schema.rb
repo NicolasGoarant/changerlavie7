@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_29_081718) do
+ActiveRecord::Schema.define(version: 2020_03_01_075057) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2020_02_29_081718) do
     t.bigint "user_id"
     t.bigint "article_id"
     t.index ["article_id"], name: "index_libraries_on_article_id"
-    t.index ["user_id"], name: "index_libraries_on_user_id"
+    t.index ["user_id"], name: "index_libraries_on_user_id", unique: true
   end
 
   create_table "newspapers", force: :cascade do |t|

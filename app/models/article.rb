@@ -11,9 +11,9 @@ class Article < ApplicationRecord
 
   scope :published, -> { where.not(publication: nil).where("publication > ?", Time.zone.now)}
 
-
   def properties
     {title: title, summary: summary, url: "/articles/#{id}", img: self.try(:photo).try(:url)}
   end
+
 
 end

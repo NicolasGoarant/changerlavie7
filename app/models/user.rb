@@ -4,14 +4,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_one :library, dependent: :destroy
+  has_many :libraries, dependent: :destroy
   has_many :articles, through: :libraries
 
-  validates_uniqueness_of :_id
-  after_save :creating_library
+  # after_save :creating_library
 
   def creating_library
-    library = self.library
+    library = self.library_id
         if library == nil
         @library = Library.new
         library = @library

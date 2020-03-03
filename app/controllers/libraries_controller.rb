@@ -2,13 +2,13 @@ class LibrariesController < ApplicationController
 
   def create
     @user = current_user
-    # if @user.library == nil
-    #     @library = Library.new
-    #     @library.user_id = @user
-    #     @library.save!
-    #     @user.update(library: @library)
-    #     @user.save!
-    # end
+    if @user.library_ids.empty?
+        @library = Library.new
+        @library.user_id = @user[:id]
+        @library.save!
+        @user.update(library_ids: @library[:id])
+        @user.save!
+    end
 
     @libraries = Library.where(user_id: current_user)
     @libraries.each do |library|

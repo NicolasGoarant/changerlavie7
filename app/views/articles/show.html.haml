@@ -5,7 +5,7 @@
       - if @article.user_ids.empty?
         .boutons_article= link_to "Ajouter à ma bibliothèque", article_path(@article), method: :patch, class: "bouton4"
       - else
-        - if @article.user_ids.include?(@user[:id])
+        - if @article.user_ids.include?(@user.library.user[:id])
           .boutons_article= link_to "Ôter de ma bibliothèque", article_path(@article), method: :patch, class: "bouton4"
         - else
           .boutons_article= link_to "Ajouter à ma bibliothèque", article_path(@article), method: :patch, class: "bouton4"
@@ -14,9 +14,9 @@
       .container
         .row
           .col-12
-            %h5.my-2= @article.auteur
+            %h5.my-2= @user.library.user[:id]
           .col-12
-            %h5.my-2= @article.publication
+            %h5.my-2= @user.library[:id]
           .col-12
             %h2.mt-4= @article.title
           .col-12
@@ -25,8 +25,6 @@
             %h2.mt-4= @article.library_ids
           .col-12
             %h2.mt-4= @user[:id]
-          .col-12
-            %h3.mt-4= @article.user_ids
           .col-12
             %h3.my-4 Idée ➔ #{@article.engagement}
       .container.pb-5

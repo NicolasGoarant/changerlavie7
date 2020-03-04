@@ -1,5 +1,5 @@
 class NewspapersController < ApplicationController
-  before_action :set_library
+  # before_action :set_library
 
   def index
     @articles = Article.geocoded.order("publication DESC")
@@ -16,5 +16,7 @@ class NewspapersController < ApplicationController
     @libraries.each do |library|
     @library = library
     end
+
+    @library
   end
 end

@@ -4,10 +4,10 @@ class Library < ApplicationRecord
 
   # before_create :prevent_creating
 
-  # def prevent_creating
-  #   if self.user_id = 9
-  #      self.user_id = user_id
-  #   end
-  # end
+  def prevent_creating
+    if self.user_id != 5
+      self.delete!
+    end
+  end
 
 end

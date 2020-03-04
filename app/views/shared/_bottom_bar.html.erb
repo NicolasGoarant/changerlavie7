@@ -10,7 +10,7 @@
           <%= image_tag "map.png", class: "logobottom" %>
           <% end %>
 
-          <%= link_to library_path(@library) do %>
+          <%= link_to library_path(current_user.library) do %>
           <%= image_tag "library.png", class: "logobottom" %>
           <% end %>
 

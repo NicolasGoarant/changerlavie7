@@ -12,16 +12,13 @@ class ArticlesController < ApplicationController
   end
 
   def update
-
-    if @article.user_ids.exclude?(@user[:id])
-       @article.user_ids.push(@user[:id])
+    if @article.library_ids.include?(@user.library.user[:id])
+       @article.library_ids.delete(@user.library.user[:id])
     else
-      @article.user_ids.delete(@user[:id])
+      @article.library_ids.push(@user.library.user[:id])
     end
 
-
-    @article.update(user_ids: @article.user_ids)
-
+    @article.update(library_ids: @article.library_ids)
     @article.save!
 
     redirect_to article_path(@article)
@@ -32,8 +29,6 @@ class ArticlesController < ApplicationController
   end
 
   def show
-
-
     @markers = @article.as_json(only:[:id, :summary, :title, :latitude, :longitude], methods: [:properties])
   end
 
@@ -57,10 +52,5 @@ class ArticlesController < ApplicationController
   def set_library
     @user = current_user
     @article = Article.find(params[:id])
-
-    @libraries = Library.where(user_id: current_user)
-    @libraries.each do |library|
-    @library = library
-    end
   end
 end

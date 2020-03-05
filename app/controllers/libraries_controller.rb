@@ -3,16 +3,17 @@ class LibrariesController < ApplicationController
   def create
     @user = current_user
     if @user.library == nil
-        @library = Library.new
-        @library.user = @user
-        @library.save!
-        @user.update(library: @library[:id])
-        @user.save!
+      @library = Library.new
+      @library.user = @user
+      @library.save!
+      @user.update(library: @library[:id])
+      @user.save!
     end
 
     @libraries = Library.where(user_id: current_user)
+
     @libraries.each do |library|
-    @library = library
+      @library = library
     end
 
     redirect_to newspapers_path

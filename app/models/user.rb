@@ -5,18 +5,18 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :library, dependent: :destroy
-  has_many :articles, through: :libraries
+  has_many :articles, through: :library
 
   after_save :creating_library
 
   def creating_library
-        @library = self.library
-        if @library == nil
+        library = self.library
+        if library == nil
         @library = Library.new
+        @library.user_id = self
         @library.save!
         self.update(library: @library)
         self.save!
     end
   end
-
 end

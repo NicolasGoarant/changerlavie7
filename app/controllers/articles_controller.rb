@@ -12,23 +12,21 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    if @article.library_ids.include?(@user.library.user[:id])
-       @article.library_ids.delete(@user.library.user[:id])
+    if @article.users.include?(@user)
+       @article.users.delete(@user)
     else
-      @article.library_ids.push(@user.library.user[:id])
+       @article.users.push(@user)
     end
-
-    @article.update(library_ids: @article.library_ids)
     @article.save!
-
     redirect_to article_path(@article)
-
   end
+
 
   def edit
   end
 
   def show
+    @library = current_user.library
     @markers = @article.as_json(only:[:id, :summary, :title, :latitude, :longitude], methods: [:properties])
   end
 

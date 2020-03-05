@@ -5,7 +5,6 @@ class Article < ApplicationRecord
   belongs_to :newspaper
   has_many :libraries
   has_many :users, through: :libraries
-  # has_many :users, through: :libraries
   mount_uploader :photo, PhotoUploader
   mount_uploader :media, PhotoUploader
 

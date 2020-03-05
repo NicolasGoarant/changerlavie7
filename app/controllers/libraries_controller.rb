@@ -2,11 +2,11 @@ class LibrariesController < ApplicationController
 
   def create
     @user = current_user
-    if @user.library_ids.empty?
+    if @user.library == nil
         @library = Library.new
-        @library.user_id = @user[:id]
+        @library.user = @user
         @library.save!
-        @user.update(library_ids: @library[:id])
+        @user.update(library: @library[:id])
         @user.save!
     end
 
@@ -19,13 +19,9 @@ class LibrariesController < ApplicationController
   end
 
   def show
-    @libraries = Library.where(user_id: current_user)
-    @libraries.each do |library|
-    @library = library
-    end
-
+    @user = current_user
     @articles = Article.geocoded.all
-    @articles_selectionned = @articles
+
     # @array_articles = Array.new
     # @array_articles = @library.article_ids
     # @articles.each do |article|

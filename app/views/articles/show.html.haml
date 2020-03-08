@@ -2,27 +2,28 @@
   .row-fluid
     #article.card-trip
       = cl_image_tag @article.photo
-      - if @article.user_ids.empty?
-        .boutons_article= link_to "Ajouter à ma bibliothèque", article_path(@article), method: :patch, class: "bouton4"
+      - if @article.library_ids.include?(@library[:id])
+        .boutons_article= link_to "Ôter de ma bibliothèque", article_articles_library_path(@article, @article_library), method: :delete, class: "bouton4"
       - else
-        - if @article.user_ids.include?(@user[:id])
-          .boutons_article= link_to "Ôter de ma bibliothèque", article_path(@article), method: :patch, class: "bouton4"
-        - else
-          .boutons_article= link_to "Ajouter à ma bibliothèque", article_path(@article), method: :patch, class: "bouton4"
+        .boutons_article= link_to "Ajouter à ma bibliothèque", article_articles_libraries_path(@article, @article_library), method: :post, class: "bouton4"
       .bloc-auteur
         = cl_image_tag @article.media, class: "media"
       .container
         .row
           .col-12
-            %h5.my-2= @user[:id]
-          .col-12
             %h2.mt-4= @article.title
           .col-12
-            %h2.mt-4= @article.user_ids
+            %h3.mt-4= @article_library
           .col-12
-            %h2.mt-4= @library
+            %h3.mt-4= @article.publication
           .col-12
-            %h2.mt-4= @user[:id]
+            %h3.mt-4= @article[:id]
+          .col-12
+            %h3.mt-4= @array_articles
+          .col-12
+            %h3.mt-4= @essai
+          .col-12
+            %h2.mt-4= @article.auteur
           .col-12
             %h3.my-4 Idée ➔ #{@article.engagement}
       .container.pb-5

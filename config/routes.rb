@@ -8,7 +8,10 @@ Rails.application.routes.draw do
   end
 
   resources :newspapers
-  resources :articles
+  resources :articles do
+      resources :articles_libraries, only: [:create, :destroy]
+  end
+
 
   namespace :admin do
     root to: 'articles#index'

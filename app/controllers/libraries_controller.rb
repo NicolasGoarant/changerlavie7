@@ -21,17 +21,12 @@ class LibrariesController < ApplicationController
 
   def show
     @user = current_user
-    @articles = Article.geocoded.all
+    @array_articles = Array.new
+    @user.library.articles_libraries.each do |article_library|
+    @array_articles << article_library.article
+    end
 
-    # @array_articles = Array.new
-    # @array_articles = @library.article_ids
-    # @articles.each do |article|
-    #   if article.library_ids.include?(@library[:id])
-    #      @array_articles.push(article[:id])
-    #      @library.update(article_ids: @array_articles)
-    #      @library.save!
-    #   end
-    # end
+    @articles = Article.geocoded.all
     @markers = @articles.as_json(only:[:id, :summary, :title, :latitude, :longitude], methods: [:properties])
   end
 

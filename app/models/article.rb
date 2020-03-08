@@ -3,8 +3,8 @@ class Article < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
 
   belongs_to :newspaper
-  has_many :libraries
-  has_many :users, through: :libraries
+  has_many :articles_libraries
+  has_many :libraries, through: :articles_libraries
   mount_uploader :photo, PhotoUploader
   mount_uploader :media, PhotoUploader
 

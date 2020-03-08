@@ -27,7 +27,7 @@ class ArticlesController < ApplicationController
     #   B. libraries has_many :articles, through: ??
     #
     # C'est un cas classique. Il faut toujours choisir B. La relation A. (HABTM) semble plus simple, mais elle est trop 'magique'
-    # et est cause de bugs pour les débutants. Surtout, il n'est pas possible de manipuler la table de jonction, ce qui est 
+    # et est cause de bugs pour les débutants. Surtout, il n'est pas possible de manipuler la table de jonction, ce qui est
     # systématiquement un problème lorsque l'on développer les capacités de l'app. Par exemple, si tu veux savoir quand les articles
     # ont été ajoutés aux libraries, tu ne pourras le faire qu'avec le has_many :through, et il faudra donc transformer A. en B.
     # Tu verras avec l'expérience que ça arrive dans 99% des cas, et que du coup, il vaut toujours mieux partir sur le has_many :through
@@ -63,8 +63,15 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @library = current_user.library
+    @library = @user.library
     @markers = @article.as_json(only:[:id, :summary, :title, :latitude, :longitude], methods: [:properties])
+
+    @user.library.articles_libraries.each do |article_library|
+        if article_library.article = @article
+        @article_library = article_library[:id]
+        end
+        @essai = article_library.article[:id]
+    end
   end
 
   # def index

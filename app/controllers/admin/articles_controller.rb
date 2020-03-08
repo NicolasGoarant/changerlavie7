@@ -1,7 +1,7 @@
 class Admin::ArticlesController < ApplicationController
   layout "/admin/application"
   before_action :user_is_admin
-  before_action :set_library
+  # before_action :set_library
 
   def create
        @article = Article.new(article_params)

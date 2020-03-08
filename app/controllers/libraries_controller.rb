@@ -26,7 +26,8 @@ class LibrariesController < ApplicationController
     @array_articles << article_library.article
     end
 
-    @articles = Article.geocoded.all
+
+    @articles = Article.geocoded
     @markers = @articles.as_json(only:[:id, :summary, :title, :latitude, :longitude], methods: [:properties])
   end
 

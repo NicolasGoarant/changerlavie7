@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
 
   resources :newspapers
+  resources :archives, only: [:show]
   resources :articles do
       resources :articles_libraries, only: [:create, :destroy]
   end

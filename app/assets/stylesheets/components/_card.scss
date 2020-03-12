@@ -130,7 +130,7 @@
 }
 
 .card-product h2 {
-  font-size: 17px;
+  font-size: 21px;
   font-weight: bold;
   margin: 0;
   color: #138A36;
@@ -259,3 +259,39 @@
   }
 }
 
+.title-archive a {
+    text-decoration: none;
+  color: #138A36;
+}
+
+.title-archive:hover a {
+    text-decoration: none;
+  color: blue;
+}
+
+.title-archive h4 {
+  font-size: 21px;
+  font-weight: bold;
+  margin: 0;
+  color-text: #138A36;
+  text-align: right;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  text-decoration: none;
+  color: #138A36;
+}
+
+
+// .title-archive:hover h4 {
+//   font-size: 17px;
+//   font-weight: bold;
+//   margin: 0;
+//   color-text: #138A36;
+//   text-align: right;
+//   padding-top: 5px;
+//   padding-bottom: 5px;
+//   padding-right: 5px;
+//   text-decoration: none;
+//   color: red;
+// }

@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-config.serve_static_assets = true
+
 
 module Changerlavie7
   class Application < Rails::Application

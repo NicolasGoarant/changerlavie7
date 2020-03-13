@@ -52,6 +52,7 @@ gem 'carrierwave'
 gem 'cloudinary'
 gem 'kaminari'
 
+gem 'rails_12factor', group: :production
 
 # JS
 gem 'momentjs-rails', '>= 2.9.0'

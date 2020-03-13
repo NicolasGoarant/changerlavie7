@@ -123,6 +123,24 @@
   color-text: black;
 }
 
+.card-product-archives {
+  overflow: hidden;
+  height: 35px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  padding-left: 7px;
+  color-text: black;
+  text-align: right;
+  justify-content: right;
+  padding-right: 5px;
+}
+
+.card-product-archives h4 {
+  text-align: right;
+}
+
 .card-product img {
   height: 60%;
   width: 80px;

@@ -1,0 +1,27 @@
+<div class="paddingbottom">
+<div class="container-fluid fixed-bottom col-sm-6 col-centered-md-6 col-centered-lg-6">
+  <div class="row-fluid">
+      <div class="col footer d-flex justify-content-between">
+          <%= link_to newspapers_path do %>
+          <%= image_tag "newspaper.png", class: "logobottom" %>
+          <% end %>
+
+          <%= link_to newspaper_path(1) do %>
+          <%= image_tag "map.png", class: "logobottom" %>
+          <% end %>
+
+          <%= link_to library_path(current_user.library) do %>
+          <%= image_tag "library.png", class: "logobottom" %>
+          <% end %>
+
+          <%= link_to pages_about_path do %>
+          <%= image_tag "about2.png", class: "logobottom" %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- https://www.beauxthemes.com/realiser-une-barre-de-navigation-avec-bootstrap/ -->

@@ -1,0 +1,124 @@
+.logo {
+width: 190px;
+height: 110px;
+// background: url(changerlavie.png);
+border-radius: 25px;
+}
+
+.logoquater {
+  padding-top: 20px;
+}
+
+.arriere-fond {
+background-color: #18FF6D;
+}
+
+.textebis {
+  padding-top: 10px;
+
+  p {
+    font-family: Prosto One;
+    font-style: bold;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+}
+
+  .bouton1 {
+  width: 175px;
+  height: 68px;
+  background: #04E824;
+  border-radius: 45px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  }
+
+  .bouton2 {
+  width: 175px;
+  height: 68px;
+  background: #138A36;
+  border-radius: 45px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  }
+
+.bouton1:hover
+{
+text-decoration: none;
+color: #18FF6D;
+}
+
+.bouton2:hover
+{
+text-decoration: none;
+color: #18FF6D;
+}
+
+.bouton1bis {
+  padding-top: 100px;
+  padding-bottom: 20px
+}
+
+.bouton2bis {
+  padding-top: 10px;
+  padding-bottom: 30px
+}
+
+.fondcontainer {
+  background-color: #18FF6D;
+}
+
+.fondcontainerlogo {
+  background-color: #18FF6D;
+  justify-content: center;
+  display: flex;
+}
+
+.titre-se-connecter {
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.form-inputs {
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+}
+
+.form-actions {
+  padding-bottom: 15px;
+}
+
+.form-actions2 {
+  padding-bottom: 189px;
+  display: inline-block;
+  align-items: center;
+}
+
+.mot-de-passe-oublie {
+  display: inline-block;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.nouvel_utilisateur {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color: white;
+}
+
+.boutonvalider {
+  padding-bottom: 40px;
+}

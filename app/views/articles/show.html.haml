@@ -1,0 +1,30 @@
+.container.col-sm-6.col-centered-md-6.col-centered-lg-6
+  .row-fluid
+    #article.card-trip
+      = cl_image_tag @article.photo
+      - if @article.library_ids.include?(@library[:id])
+        .boutons_article= link_to "Ôter de ma bibliothèque", article_articles_library_path(@article, @article_library), method: :delete, class: "bouton4"
+      - else
+        .boutons_article= link_to "Ajouter à ma bibliothèque", article_articles_libraries_path(@article, @article_library), method: :post, class: "bouton4"
+      .bloc-auteur
+        = cl_image_tag @article.media, class: "media"
+      .container
+        .row
+          .col-12
+            %h2.mt-4= @article.title
+          .col-12
+            %h3.mt-4= @article.publication
+          .col-12
+            %h2.mt-4= @article.auteur
+          .col-12
+            %h3.my-4 Idée ➔ #{@article.engagement}
+      .container.pb-5
+        = @article.content.try(:html_safe)
+        %small.text-muted
+          publié le
+          = @article.publication
+          - if @article.auteur.present?
+            par
+            = @article.auteur
+    #map{"data-mapbox-api-key" => "pk.eyJ1IjoiYWdnb2xmZSIsImEiOiJjazE3dDc3amYxZmlkM2xwM29jZGp2dmNiIn0.dZFTZnFgD91_YL9rarsVlw", "data-markers" => @markers.to_json, :style => "width: 100%; height: 600px;"}
+

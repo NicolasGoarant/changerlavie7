@@ -1,0 +1,52 @@
+<div class="container-fluid fondcontainer col-md-6 col-sm-6 col-lg-8 pb-lg-5">
+  <div class="row justify-content-center pb-lg-5">
+    <div class="logoquater">
+      <%= image_tag "amontourexclamation.png", class: "logo" %>
+    </div>
+  </div>
+
+    <div class="row justify-content-center pb-lg-5">
+        <div class="textebis">
+          <p><b>&Eacutetonner</b></p>
+          <p><b>&Eacuteclairer</b></p>
+          <p><b>Entraîner</b></p>
+        </div>
+    </div>
+
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="row justify-content-center">
+    <div class="form-inputs">
+        <%= f.input :email,
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" } %>
+        <%= f.input :password,
+                    required: false,
+                    input_html: { autocomplete: "current-password" } %>
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    </div>
+  </div>
+
+  <div class="row justify-content-center pb-lg-5">
+       <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+        <%= link_to "Mot de passe oublié", new_password_path(resource_name), style: "color: #138A36; font-weight: bold; padding-bottom: 10px; top: -5px;" %><br />
+       <% end %>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="form-actions">
+      <%= f.button :submit, "Valider", class: "bouton2" %>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="form-actions">
+       <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+       <%= link_to "Nouvel utilisateur", new_registration_path(resource_name), class: "bouton2"%><br />
+       <% end %>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+

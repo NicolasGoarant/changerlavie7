@@ -1,0 +1,42 @@
+<div class="container-fluid fondcontainer col-md-6 col-sm-6 col-lg-6">
+  <div class="row justify-content-center">
+    <div class="logoquater">
+      <%= image_tag "amontourexclamation.png", class: "logo" %>
+    </div>
+  </div>
+
+   <div class="row justify-content-center">
+        <div class="textebis">
+          <p><b>&Eacutetonner</b></p>
+          <p><b>&Eacuteclairer</b></p>
+          <p><b>Entraîner</b></p>
+        </div>
+   </div>
+
+  <div class="row justify-content-center">
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
+
+      <div class="form-inputs">
+        <%= f.input :email,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" }%>
+         <%= f.input :password,
+                       required: true,
+                       hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                       input_html: { autocomplete: "new-password" } %>
+         <%= f.input :password_confirmation,
+                       required: true,
+                       input_html: { autocomplete: "new-password" } %>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="boutonvalider">
+          <div class="form-actions">
+            <%= f.button :submit, "Valider", class: "bouton2" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+</div>

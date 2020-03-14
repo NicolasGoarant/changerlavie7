@@ -1,0 +1,315 @@
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+.card-trip > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  color-text: black;
+  font-family: Liberation Serif;
+  line-height: 25px;
+}
+
+.card-trip-infos h2 {
+  color: #138A36;
+  padding-bottom: 8px;
+}
+
+.card-trip-infos h4 {
+  color: black;
+  padding-bottom: 2px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.card-trip-infos p {
+  font-size: 14px;
+  font-family: Serif;
+  line-height: 25px;
+  color: black;
+  padding-bottom: 5px;
+}
+
+.card-trip-infos h3 {
+  font-size: 14px;
+  color: #285238;
+  font-style: bold;
+}
+
+.card-trip-infos .card-trip-user {
+  right: 6px;
+  top: -70px;
+  width: 70px;
+  height: 70px;
+}
+
+.bibliotheque_vide {
+  width: 250px;
+  padding-top: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.titre h2 {
+  text-align: center;
+  font-family: Serif;
+  color: #285238;
+}
+
+.card-trip-infos :hover {
+  color: #138A36;
+  opacity: 2;
+  text-decoration: none;
+}
+
+.titre h4 {
+  text-align: center;
+  font-family: Serif;
+  color: #285238;
+  font-size: 15px;
+}
+
+
+.bibliotheque_vide h4 {
+    text-align: center;
+  font-family: Serif;
+  color: #285238;
+  font-size: 15px;
+}
+
+.zero_articles h4 {
+  text-align: center;
+  font-family: Serif;
+  color: #285238;
+  font-size: 25px;
+  padding-bottom: 80px;
+}
+
+
+.card-product {
+  overflow: hidden;
+  height: 150px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+  padding-left: 7px;
+  color-text: black;
+}
+
+.card-product-archives {
+  overflow: hidden;
+  height: 35px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  padding-left: 7px;
+  color-text: black;
+  text-align: right;
+  justify-content: right;
+  padding-right: 5px;
+}
+
+.card-product-archives h4 {
+  text-align: right;
+}
+
+.card-product img {
+  height: 60%;
+  width: 80px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 21px;
+  font-weight: bold;
+  margin: 0;
+  color: #138A36;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  color: black;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+.card-product-infos :hover {
+  color: #18FF6D;
+  opacity: 2;
+  text-decoration: none;
+}
+
+
+.card-trip .card-trip-infos-bis {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  color-text: black;
+  font-family: Liberation Serif;
+  line-height: 25px;
+}
+
+.card-trip-infos-bis h2 {
+  color: #138A36;
+  padding-bottom: 8px;
+}
+
+.card-trip-infos-bis h4 {
+  color: black;
+  padding-bottom: 2px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.card-trip-infos-bis p {
+  font-size: 14px;
+  font-family: Serif;
+  line-height: 25px;
+  color: black;
+  padding-bottom: 5px;
+}
+
+.card-trip-infos-bis h3 {
+  font-size: 14px;
+  color: #285238;
+  font-style: bold;
+}
+
+  .media_place {
+  position: relative;
+  left: 225px;
+  top: -50px;
+  width: 35%;
+  height: 35%;
+  }
+
+.photo_place {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-trip_ter {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+.card-trip-infos_ter h2 {
+  text-align: center;
+  font-family: Serif;
+  color: #285238;
+  font-size: 15px;
+}
+
+.card-trip_ter .card-trip-infos_ter {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  color-text: black;
+  font-family: Liberation Serif;
+  line-height: 25px;
+}
+
+.card-trip .media {
+  height: 200px;
+  width: 200px;
+  padding-top: -20px;
+  padding-left: 17px;
+}
+
+.bloc-auteur {
+  padding-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+    p {
+  font-size: 15px;
+  font-style: bold;
+  padding-left: 5px;
+  }
+
+    .media {
+  height: 140px;
+  max-width: 100%;
+  padding-top: 20px;
+  width: auto;
+  }
+}
+
+.title-archive a {
+  text-decoration: none;
+  color: blue;
+}
+
+.title-archive:hover a {
+    text-decoration: none;
+  color: blue;
+}
+
+.title-archive h4 {
+  font-size: 21px;
+  font-weight: italic;
+  margin: 0;
+  color-text: blue;
+  text-align: right;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  text-decoration: none;
+  color: #138A36;
+}
+
+
+// .title-archive:hover h4 {
+//   font-size: 17px;
+//   font-weight: bold;
+//   margin: 0;
+//   color-text: #138A36;
+//   text-align: right;
+//   padding-top: 5px;
+//   padding-bottom: 5px;
+//   padding-right: 5px;
+//   text-decoration: none;
+//   color: red;
+// }

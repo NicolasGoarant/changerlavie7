@@ -1,0 +1,54 @@
+= form_for [@article] do |f|
+
+  .mt-3
+    %label Titre
+    = f.text_field :title, class: "form-control"
+
+  .mt-3
+    %label Auteur
+    = f.text_field :auteur, class: "form-control"
+
+  .mt-3
+    %label Summary
+    = f.text_field :summary, class: "form-control"
+
+  .mt-3
+    %label Date de publication
+    = f.text_field :publication, class: "datepicker form-control",
+                                  value: @article.publication.try(:strftime,"%d/%m/%Y") || Time.current.strftime("%d/%m/%Y"),
+                                  data: {mindate: raw(3.year.ago.to_date), maxdate: raw(Time.current.to_date+3.month)}, autocomplete: "off"
+  .row
+    .col-6.mt-3
+      %label Photo
+      = f.file_field :photo, class: "form-control"
+
+    .col-6.mt-3
+      %label Media
+      = f.file_field :media, class: "form-control"
+
+  .mt-3
+    %label Contenu
+    = f.hidden_field :content, rows: 15, class:"form-control summernote"
+    %trix-editor{input: "article_content", style: "height:500px", class: "bg-white"}
+
+  .mt-3
+    %label Adresse
+    = f.text_field :address, class: "form-control"
+
+  .mt-3
+    %label Engagement
+    = f.text_field :engagement, class: "form-control"
+
+  .mt-3
+    %label Status
+    = f.text_field :status, class: "form-control"
+
+  .mt-3
+    %label Journal
+    %br= f.select :newspaper_id, Newspaper.all.map { |np| ["Journal #{np.id}", np.id]}
+
+  .mt-3
+    = f.submit "Ajouter cet article", class: "btn btn-primary"
+    - if @article.persisted?
+      ou
+      = link_to "voir l'article", @article

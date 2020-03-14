@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  summary: MyString
+  photo: MyString
+  media: MyString
+  content: MyString
+  library: one
+  newspaper: one
+
+two:
+  title: MyString
+  summary: MyString
+  photo: MyString
+  media: MyString
+  content: MyString
+  library: two
+  newspaper: two

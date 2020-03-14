@@ -1,0 +1,53 @@
+!!!
+%html{lang: "#{I18n.locale}", prefix:"fb: http://www.facebook.com/2008/fbml"}
+  %head
+    %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
+    %title= h "Administration CLV"
+    %meta{name: "title", content: "CLV"}
+    %meta{name: "description", content: "CLV"}
+    %meta{name: "author", content: "Changer la vie"}
+    %meta{property: "og:title", content: "#{@title.presence || ENV['SEO_TITLE']}"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"}
+    %link{href: "https://use.fontawesome.com/releases/v5.7.2/css/all.css",integrity: "sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr", crossorigin: "anonymous", rel: "stylesheet"}
+    %link{href: "https://fonts.googleapis.com/css?family=Lato:300,400,700,700i|Assistant:300,400,700|Open+Sans:300,400,700|Oswald:600,700,800", rel: "stylesheet"}
+    %link{href: "/favicon.png", rel: "shortcut icon", type: "image/png"}
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    = stylesheet_link_tag "admin/application.css", 'data-turbolinks-track': 'reload'
+    = javascript_include_tag "admin/application.js", 'data-turbolinks-track': 'reload'
+
+    = csp_meta_tag
+    = csrf_meta_tag
+
+    - if controller.action_name == "search"
+      %meta{name: "robots", content: "noindex"}
+      %meta{name: "googlebot", content: "noindex"}
+
+    = yield :head
+
+  %body{itemscope:true, itemtype:"http://schema.org/WebPage", data:{locale: :fr, page: "#{controller.controller_name}##{controller.action_name}"}}
+    %nav.navbar.navbar-dark.bg-dark.navbar-expand-lg.sticky-top.row.justify-content-between.pl-4.pr-3
+      = link_to admin_articles_url, class: "navbar-brand" do
+        Administration CLV
+
+
+
+    .row
+      %nav.col-md-2.d-none.d-md-block.sidebar{style:"background:#EEE;style:height:100%"}
+        .sidebar-sticky
+          .nav.nav-pills.flex-column
+            = link_to admin_articles_url, class: "nav-item nav-link" do
+              %i.fa.fa-file.mr-2.text-dark
+              Articles
+
+
+
+
+      - if flash[:notice]
+        .col-md-9.ml-sm-auto.col-lg-10.px-4.mt-5{:role => "main"}
+          .alert.alert-info= flash[:notice].html_safe
+      = yield
+
+
+

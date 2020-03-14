@@ -1,5 +1,5 @@
 {
-  "name": "changerlavie7",
+  "name": "a-mon-tour",
   "private": true,
   "dependencies": {
     "@rails/webpacker": "^4.2.2",

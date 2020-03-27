@@ -132,13 +132,15 @@
   align-items: center;
   padding-left: 7px;
   color-text: black;
+  font-style: bold;
   text-align: right;
   justify-content: right;
   padding-right: 5px;
 }
 
-.card-product-archives h4 {
+.card-product-archives h6 {
   text-align: right;
+  font-weight: bold;
 }
 
 .card-product img {

@@ -8,17 +8,16 @@ background-position: center;
 }
 
 .logoquater {
-  padding-top: 20px;
+  padding-top: 2px;
   justify-content: center;
   background-position: center;
 }
 
 .wrapper {
   width: 100%;
-  background-position: center;
-  background-size: cover;
   height: 350px;
-  background-image: url(asset-path('eb.png'));
+  padding-bottom: 40px;
+  padding-top: 20px;
 }
 
 .arriere-fond {
@@ -27,6 +26,7 @@ background-color: #18FF6D;
 
 .textebis {
   padding-top: 20px;
+  line-height: 10px;
 
   p {
     font-family: Prosto One;
@@ -38,12 +38,12 @@ background-color: #18FF6D;
     color: #18FF6D;
   }
 
-  h5 {
-    font-family: Prosto One;
+  h3 {
+    font-family: arial;
     font-style: bold;
     font-weight: normal;
-    font-size: 22px;
-    line-height: 22px;
+    font-size: 25px;
+    line-height: 30px;
     text-align: center;
     color: #138A36;
   }
@@ -98,12 +98,15 @@ color: #18FF6D;
 .fondcontainer {
   // background-color: #18FF6D;
   background-color: white;
+
 }
 
 .fondcontainerbas {
   // background-color: #18FF6D;
   background-color: #18FF6D;
   padding-top: 15px;
+  border-radius: 15px;
+  padding-top: 20px;
 }
 
 .fondcontainerlogo {
@@ -153,6 +156,29 @@ color: #18FF6D;
 }
 
 .logo-accueil {
-  height: 80px;
-  width: 80px;
+  height: 120px;
+  width: 120px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-justify: auto;
+  padding-bottom: 3px;
 }
+
+.container {
+  padding-bottom: 20px;
+}
+
+.logotrio {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 40px;
+}
+
+// .border-top {
+//   height: 10px;
+//   background-color: #138A36;
+// }

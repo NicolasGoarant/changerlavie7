@@ -1,40 +1,38 @@
 <div class="container-fluid fondcontainer col-md-6 col-sm-6 col-lg-12 pb-lg-5">
-  <div class="row border-top justify-content-center">
-  </div>
-    <div class="row justify-content-center">
+  <div class="row justify-content-center">
       <div class="logoquater justify-content-center">
         <%= image_tag "amontourexclamation.png", class: "logo" %>
       </div>
-    </div>
-        <div class="textebis col-md-6 col-sm-6 col-lg-12 pb-lg-5">
-          <h3><b>Les informations qui étonnent, éclairent, entraînent</b></h3>
+  </div>
+  <div class="textebis col-md-6 col-sm-6 col-lg-12 pb-lg-5">
+    <h3><b>Les informations qui étonnent, éclairent, entraînent</b></h3>
 <!--           <h3><b>étonnent, éclairent, entraînent</b></h3> -->
-        </div>
+  </div>
 
-      <div class="row justify-content-center">
-        <%= image_tag "eb.png", class: "wrapper justify-content-center col-md-2 col-sm-2 col-lg-4 pb-lg-2" %>
-      </div>
+  <div class="row justify-content-center">
+    <%= image_tag "eb.png", class: "wrapper justify-content-center col-md-2 col-sm-2 col-lg-4 pb-lg-2" %>
+  </div>
 
-        <div class="container net-centered col-lg-10">
-          <div class="row">
-           <div class="col-md-4 col-sm-4 mb-4 mb-md-0 col-centered text-justify">
+  <div class="container net-centered col-lg-10">
+    <div class="row">
+      <div class="col-md-4 col-sm-4 mb-4 mb-md-0 col-centered text-justify">
                 <%= image_tag "couch.png", class: "logo-accueil" %>
               <h6>Les informations qui nous parviennent sont le plus souvent tristes. Pesantes. Tragiques. Nous y sommes tous confrontés. Elles nous enferment dans la passivité : à leur lecture comme à leur écoute, nous nous sentons récepteurs avant de nous sentir acteurs. L'objectif d'<i>A mon tour !</i> : <b>susciter l'action, l'engagement, la créativité</b>. </h6>
-           </div>
-           <div class="col-md-4 col-sm-4 mb-4 mb-md-0 col-centered text-justify">
+      </div>
+      <div class="col-md-4 col-sm-4 mb-4 mb-md-0 col-centered text-justify">
             <%= image_tag "baguette.png", class: "logo-accueil" %>
               <h6>Avec <i>A mon tour !</i>, nous voulons publier des informations qui précèdent l'action. <b>Issues de la presse nationale comme locale</b>, elles mettent à l'honneur et en lumière <b>le foisonnement d'initiatives</b> qui ouvrent à d'inattendus horizons de l'imagination, suscitent un "<i>c'est étonnant</i>", déclenchent un "<i>pourquoi pas moi</i>". </h6>
-           </div>
-           <div class="col-md-4 col-sm-4 mb-4 mb-md-0 col-centered text-justify">
+      </div>
+      <div class="col-md-4 col-sm-4 mb-4 mb-md-0 col-centered text-justify">
             <%= image_tag "action.png", class: "logo-accueil" %>
               <h6>Ces <b>"inform-actions"</b> peuvent vous inspirer tout de suite ou bien plus tard. Vous pouvez les ranger dans une bibliothèque, votre bibliothèque. <i>"A mon tour !"</i> se veut participatif : si vous identifiez des actions enthousiasmantes, des informations étonnantes, des innovations passionnantes, n'hésitez à nous les relayer.</h6>
-           </div>
-          </div>
-        </div>
+       </div>
+    </div>
+  </div>
 
   <div class="container-fluid fondcontainerbas col-md-12 col-sm-6 col-lg-12 pb-lg-5">
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="row justify-content-center">
+  <div class="row justify-content-center aremplir">
     <div class="form-inputs">
         <%= f.input :email,
                     required: false,

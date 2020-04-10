@@ -6,6 +6,9 @@
   height: 130%;
   top: 0;
   z-index: 2;
+  border-bottom: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #138A36;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -25,7 +28,6 @@
   font-style: times;
   color: #138A36;
   font-weight: bold;
-  font-style: italic;
   word-spacing: 8px;
   padding-top: 10px;
   padding-left: 30px

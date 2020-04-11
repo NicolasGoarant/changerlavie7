@@ -1,5 +1,5 @@
 .footer {
-  background: #F4F4F4;
+  background: white;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -8,6 +8,9 @@
   padding-right: 25px;
   position: sticky;
   bottom: 0;
+  border-top: solid;
+  border-top-width: 2px;
+  border-top-color: #138A36;
 }
 
 
@@ -35,7 +38,6 @@
 
 .logobottom {
   height: 50px;
-  color: #138A36;
 }
 
 .footer :hover {
@@ -43,8 +45,14 @@
   opacity: 0.5;
   text-decoration: none;
   font-size: 24px;
+  fill: red;
 }
 
 .paddingbottom {
   padding-top: 65px;
+}
+
+.logobottom :hover {
+  height: 50px;
+
 }

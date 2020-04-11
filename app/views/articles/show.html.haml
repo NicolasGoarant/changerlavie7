@@ -13,11 +13,11 @@
           .col-12
             %h2.mt-4= @article.title
           .col-12
+            %h3.my-4 Idée ➔ #{@article.engagement}
+          .col-12
             %h3.mt-4= @article.publication
           .col-12
             %h2.mt-4= @article.auteur
-          .col-12
-            %h3.my-4 Idée ➔ #{@article.engagement}
       .container.pb-5
         = @article.content.try(:html_safe)
         %small.text-muted

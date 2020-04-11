@@ -8,10 +8,10 @@
                 <a href= <%= article_path(article) %> >
                   <div>
                     <h2><%= article.title %></h2>
+                    <h3><strong> Action ➔ <%= article.engagement %></strong></h3>
                     <h4><%= article.publication %></h4>
                     <h4> <%= article.auteur %></h4>
                     <p> <%= article.summary %></p>
-                     <h3><strong> Idée ➔ <%= article.engagement %></strong></h3>
                   </div>
                 </a>
                  <%= cl_image_tag article.media, class: "card-trip-user avatar-bordered" %>

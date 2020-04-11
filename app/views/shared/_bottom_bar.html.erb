@@ -3,19 +3,25 @@
   <div class="row-fluid">
       <div class="col footer d-flex justify-content-between">
           <%= link_to newspapers_path do %>
-          <%= image_tag "cnewspaper.png", class: "logobottom" %>
+          <%= image_tag "ccnewspaper.png", class: "logobottom" %>
+          <p>à la une</p>
           <% end %>
 
           <%= link_to newspaper_path(1) do %>
-          <%= image_tag "cmap.png", class: "logobottom" %>
+          <%= image_tag "ccmap.png", class: "logobottom" %>
+          <p>la carte</p>
           <% end %>
 
+          <div class="logocentre">
           <%= link_to library_path(current_user.library) do %>
-          <%= image_tag "library.png", class: "logobottom" %>
+          <%= image_tag "ccarticlelogo.png", class: "logobottom" %>
+          <p>mes articles</p>
           <% end %>
+          </div>
 
-          <%= link_to pages_about_path do %>
-          <%= image_tag "about2.png", class: "logobottom" %>
+          <%= link_to archive_path(1) do %>
+          <%= image_tag "cclibrary.png", class: "logobottom" %>
+          <p>archives</p>
           <% end %>
       </div>
     </div>

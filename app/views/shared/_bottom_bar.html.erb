@@ -12,12 +12,10 @@
           <p>la carte</p>
           <% end %>
 
-          <div class="logocentre">
           <%= link_to library_path(current_user.library) do %>
           <%= image_tag "ccarticlelogo.png", class: "logobottom" %>
-          <p>mes articles</p>
+          <p>sélection</p>
           <% end %>
-          </div>
 
           <%= link_to archive_path(1) do %>
           <%= image_tag "cclibrary.png", class: "logobottom" %>

@@ -2,8 +2,10 @@
   justify-content: space-between;
   background: white;
   position: sticky;
+  display: flex;
+  align-items: center;
   width: 100%;
-  height: 130%;
+  height: 65px;
   top: 0;
   z-index: 2;
   border-bottom: solid;
@@ -11,65 +13,10 @@
   border-bottom-color: #138A36;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 67px;
-  position: absolute;
-  top: 1px;
-  left: -0px;
-}
-
-.slogan {
-  line-height: 1px;
-  font-size: 25px;
-  font-style: times;
-  color: #138A36;
-  font-weight: bold;
-  word-spacing: 8px;
-  padding-top: 10px;
-  padding-left: 30px
-}
-
-.slogan p {
-  font-size: 15px;
-}
-
-
-.sloganbis {
-  line-height: 1px;
-  font-size: 25px;
-  font-style: times;
-  color: #138A36;
-  font-weight: bold;
-  font-style: italic;
-  word-spacing: 8px;
-  padding-top: 10px;
-  padding-left: 30px
-}
-
-.sloganbis p {
-  line-height: 1px;
-  font-size: 15px;
-  font-style: times;
-  color: #34403A;
-  font-weight: bold;
-  word-spacing: 4px;
-  padding-left: 17px
-}
-
-
 .navbarlogos {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-}
-
-.wagonbar {
-  position: sticky;
-  z-index: 100;
 }
 
 .paddingnavbar {
@@ -77,8 +24,15 @@
 }
 
 .logonavbar {
-  height: 25px;
+  height: 29px;
   width: auto;
+}
+
+.logonavbar-centre {
+  height: 50px;
+  width: auto;
+  align-items: center;
+  padding-bottom: 2px;
 }
 
 .logonavbar:hover {
@@ -87,3 +41,51 @@
   text-decoration: none;
   font-size: 24px;
 }
+
+
+
+
+// .navbar-lewagon .navbar-brand img {
+//   width: 85px;
+//   position: absolute;
+//   top: 1px;
+//   left: -0px;
+// }
+
+// .slogan {
+//   line-height: 1px;
+//   font-size: 25px;
+//   font-style: times;
+//   color: #138A36;
+//   font-weight: bold;
+//   word-spacing: 8px;
+//   padding-top: 10px;
+//   padding-left: 30px
+// }
+
+// .slogan p {
+//   font-size: 15px;
+// }
+
+
+// .sloganbis {
+//   line-height: 1px;
+//   font-size: 25px;
+//   font-style: times;
+//   color: #138A36;
+//   font-weight: bold;
+//   font-style: italic;
+//   word-spacing: 8px;
+//   padding-top: 10px;
+//   padding-left: 30px
+// }
+
+// .sloganbis p {
+//   line-height: 1px;
+//   font-size: 15px;
+//   font-style: times;
+//   color: #34403A;
+//   font-weight: bold;
+//   word-spacing: 4px;
+//   padding-left: 17px
+// }

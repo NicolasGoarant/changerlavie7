@@ -65,3 +65,9 @@
             par
             = @article.auteur
     #map{"data-mapbox-api-key" => "pk.eyJ1IjoiYWdnb2xmZSIsImEiOiJjazE3dDc3amYxZmlkM2xwM29jZGp2dmNiIn0.dZFTZnFgD91_YL9rarsVlw", "data-markers" => @markers.to_json, :style => "width: 100%; height: 600px;"}
+
+
+
+  <div class="row justify-content-center">
+    <%= image_tag "eb.png", class: "wrapper justify-content-center col-md-10 col-sm-12 col-lg-4 pb-lg-2" %>
+  </div>

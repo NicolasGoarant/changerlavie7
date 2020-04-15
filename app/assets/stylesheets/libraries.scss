@@ -1,10 +1,15 @@
 // Place all the styles related to the Libraries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
- .titlelibrary {
+.titlelibrary {
     text-align: center;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     color: #138A36;
     background-color: white;
-  }
+}
+
+.titlelibrary h3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

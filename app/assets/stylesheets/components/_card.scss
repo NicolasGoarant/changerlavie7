@@ -3,7 +3,8 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   z-index: 2;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
+  border-radius: 5px;
 }
 
 .card-trip > img {
@@ -129,7 +130,8 @@
   padding-left: 7px;
   color-text: black;
   margin: auto;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
+  border-radius: 5px;
 }
 
 .card-product-archives {
@@ -181,6 +183,7 @@
 .card-product .card-product-infos {
   padding: 16px;
   margin: auto;
+  align-items: left;
 }
 
 .card-product-infos :hover {

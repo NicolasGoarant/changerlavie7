@@ -3,6 +3,7 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   z-index: 2;
+  margin-bottom: 5px;
 }
 
 .card-trip > img {
@@ -128,8 +129,7 @@
   padding-left: 7px;
   color-text: black;
   margin: auto;
-  margin-bottom: 1px;
-
+  margin-bottom: 5px;
 }
 
 .card-product-archives {
@@ -153,16 +153,19 @@
 }
 
 .card-product img {
-  height: 60%;
-  width: 80px;
+  height: 62%;
+  width: 85px;
   object-fit: cover;
+  border-radius: 8px;
+  padding-left: 2px;
 }
 
 .card-product h2 {
-  font-size: 21px;
+  font-size: 16px;
   font-weight: bold;
   margin: 0;
   color: #138A36;
+  padding-bottom: 5px;
 }
 
 .card-product p {

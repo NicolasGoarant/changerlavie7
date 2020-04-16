@@ -5,8 +5,8 @@
 <div class="container-fluid col-sm-7 col-centered-md-6 col-centered-lg-6">
   <div class="row-fluid">
     <% @articles.each do |article|  %>
-      <div class="card-product">
-          <%= cl_image_tag article.photo, class: "photo" %>
+          <div class="card-product">
+           <%= cl_image_tag article.photo, class: "photo" %>
             <div class="card-product-infos">
               <a href= <%= article_path(article) %> >
                <div>

@@ -191,12 +191,12 @@
   color: black;
   margin: auto;
   float: left;
+  display: flex;
 }
 
 .card-product .card-product-infos {
   padding: 16px;
   margin: auto;
-  align-items: left;
 }
 
 .card-product-infos :hover {

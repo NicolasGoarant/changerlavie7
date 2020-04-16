@@ -7,20 +7,26 @@
           <p>à la une</p>
           <% end %>
 
+          <%= link_to library_path(current_user.library) do %>
+          <%= image_tag "ccarticlelogo.png", class: "logobottom" %>
+          <p>sélection</p>
+          <% end %>
+
           <%= link_to newspaper_path(1) do %>
           <%= image_tag "ccmap.png", class: "logobottom" %>
           <p>la carte</p>
-          <% end %>
-
-          <%= link_to library_path(current_user.library) do %>
-          <%= image_tag "ccarticlelogo.png", class: "logobottom" %>
-          <p>ma sélection</p>
           <% end %>
 
           <%= link_to archive_path(1) do %>
           <%= image_tag "cclibrary.png", class: "logobottom" %>
           <p>archives</p>
           <% end %>
+
+          <%= link_to pages_about_path do %>
+          <%= image_tag "information.png", class: "logobottom" %>
+          <p>à propos</p>
+          <% end %>
+
       </div>
     </div>
   </div>

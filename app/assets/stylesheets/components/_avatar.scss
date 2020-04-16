@@ -35,8 +35,9 @@
 .card-product-media {
   width: 70px;
   height: 40px;
-  float: right;
+  float: left;
   flex-grow: 1;
+  vertical-align: bottom;
 }
 
 

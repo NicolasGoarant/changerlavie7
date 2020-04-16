@@ -71,3 +71,29 @@
   <div class="row justify-content-center">
     <%= image_tag "eb.png", class: "wrapper justify-content-center col-md-10 col-sm-12 col-lg-4 pb-lg-2" %>
   </div>
+
+
+
+
+<div class="paddingnavbar">
+  <div class="container-fluid fixed-top col-md-centered-6 col-sm-7 col-lg-centered-6">
+        <div class="navbar navbar-lewagon">
+
+          <%= link_to pages_contact_path do %>
+            <%= image_tag "lettre2.png", class: "logonavbar"  %>
+          <% end %>
+
+
+          <%= link_to newspapers_path do %>
+            <%= image_tag "amontourexclamation.png", class: "logonavbar-centre" %>
+          <% end %>
+
+
+        <%= link_to destroy_user_session_path, method: :delete do %>
+          <%= image_tag "deconnexion7.png", class: "logonavbar" %>
+        <% end %>
+
+        </div>
+
+  </div>
+</div>

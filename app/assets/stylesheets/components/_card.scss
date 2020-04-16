@@ -126,6 +126,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding-bottom: 5px;
   padding-left: 7px;
   color-text: black;
@@ -154,13 +155,23 @@
   font-weight: bold;
 }
 
-.card-product img {
+// .card-product img {
+//   height: 62%;
+//   width: 85px;
+//   object-fit: cover;
+//   border-radius: 8px;
+//   padding-left: 2px;
+// }
+
+.card-product .photo {
   height: 62%;
   width: 85px;
   object-fit: cover;
   border-radius: 8px;
   padding-left: 2px;
 }
+
+
 
 .card-product h2 {
   font-size: 16px;

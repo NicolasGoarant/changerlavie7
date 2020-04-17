@@ -1,5 +1,5 @@
 .navbar-lewagon {
-  justify-content: space-between;
+  justify-content: space-evenly;
   background: white;
   position: sticky;
   display: flex;
@@ -8,9 +8,6 @@
   height: 65px;
   top: 0;
   z-index: 2;
-  border-bottom: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #138A36;
 }
 
 .navbarlogos {
@@ -37,7 +34,6 @@
 .logonavbar-centre {
   height: 50px;
   width: auto;
-  align-items: center;
   padding-bottom: 2px;
 }
 
@@ -56,11 +52,30 @@
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  background: white;
 }
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+
+
+.navbar .navbar-toggler-icon {
+background-image: url('hamburger.png');
+}
+
+.navbar .navbar-toggler {
+  border: dotted;
+  border-width: 1px;
+  border-color: #138A36;
+}
+
+
+
+
+
+
 
 
 // .navbar-lewagon .navbar-brand img {

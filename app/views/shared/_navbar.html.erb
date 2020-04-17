@@ -1,22 +1,32 @@
 <div class="paddingnavbar">
   <div class="container-fluid fixed-top col-md-centered-6 col-sm-7 col-lg-centered-6">
-        <div class="navbar navbar-lewagon">
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
 
-          <%= link_to pages_contact_path do %>
-            <%= image_tag "lettre2.png", class: "logonavbar"  %>
-          <% end %>
+      <%= link_to newspapers_path do %>
+        <%= image_tag "amontourexclamation.png", class: "logonavbar-centre" %>
+      <% end %>
 
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-          <%= link_to newspapers_path do %>
-            <%= image_tag "amontourexclamation.png", class: "logonavbar-centre" %>
-          <% end %>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+         <%= link_to "Contact", pages_contact_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+         <%= link_to "A propos", pages_about_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+         <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        </li>
+       </ul>
+      </div>
 
-
-        <%= link_to destroy_user_session_path, method: :delete do %>
-          <%= image_tag "deconnexion7.png", class: "logonavbar" %>
-        <% end %>
-
-        </div>
-
+    </div>
   </div>
 </div>
+
+
+

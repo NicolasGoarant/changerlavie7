@@ -34,8 +34,8 @@
             <div class="card-product-infos">
               <a href= <%= article_path(article) %> >
                <div>
-                  <h2> <%= article.title %> </h2>
-                  <p> <%= article.summary %></p>
+                  <h2><%= article.title %></h2>
+                  <p><%= article.summary %></p>
                   <%= cl_image_tag article.media, class: "card-product-media" %>
                </div>
               </a>

@@ -118,3 +118,88 @@ header #hamburger:hover
 }
 
 v
+
+
+
+page d'accueil avant nouvelle présentation
+
+
+<div class="container-fluid fondcontainer col-sm-7 col-centered-md-6 col-centered-lg-6">
+  <div class="row net-centered-bis">
+    <div class="col-md-12 col-sm-8 col-lg-6 col-centered">
+      <div class="reseauxsociaux">
+        <a href= "#"><%= image_tag "facebook.png" %></a>
+        <a href= "#"><%= image_tag "instagram.png" %></a>
+        <a href= "#"><%= image_tag "twitter.png" %></a>
+        <a href= "#"><%= image_tag "linkedin.jpg" %></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid fondcontainer-bis col-sm-7 col-centered-md-6 col-centered-lg-6">
+  <div class="row justify-content-center">
+      <div class="logoquater justify-content-center">
+        <%= image_tag "amontourexclamation.png", class: "logo" %>
+      </div>
+  </div>
+  <div class="textebis col-md-12 col-sm-12 col-lg-12 pb-lg-5">
+    <h3><b>Les informations qui étonnent, éclairent, entraînent</b></h3>
+<!--           <h3><b>étonnent, éclairent, entraînent</b></h3> -->
+  </div>
+
+  <div class="container net-centered col-sm-12 col-lg-10 col-md-10">
+    <div class="row">
+      <div class="col-md-4 col-sm-12 mb-4 mb-md-0 col-centered text-justify">
+                <%= image_tag "couch.png", class: "logo-accueil" %>
+              <h6>C'est un constat partagé : les informations qui nous parviennent sont le plus souvent pesantes. Tragiques. Elles nous enferment dans la passivité : à leur lecture comme à leur écoute, nous nous sentons récepteurs plutôt qu'acteurs. A rebours de ces pensées tristes, l'objectif d'<i>A mon tour !</i> est de <b>susciter l'action, l'engagement, la créativité</b>. </h6>
+      </div>
+      <div class="col-md-4 col-sm-12 mb-4 mb-md-0 col-centered text-justify">
+            <%= image_tag "baguette.png", class: "logo-accueil" %>
+              <h6>Avec <i>A mon tour !</i>, nous voulons publier des informations qui précèdent l'action. <b>Issues de la presse nationale comme locale</b>, elles mettent à l'honneur et en lumière <b>le foisonnement d'initiatives</b> qui ouvrent à d'inattendus horizons de l'imagination, suscitent un "<i>c'est étonnant</i>", déclenchent un "<i>pourquoi pas moi</i>". </h6>
+      </div>
+      <div class="col-md-4 col-sm-12 mb-4 mb-md-0 col-centered text-justify">
+            <%= image_tag "action.png", class: "logo-accueil" %>
+              <h6>Ces <b>"inform-actions"</b> peuvent vous inspirer tout de suite ou bien plus tard. Vous pouvez les ranger dans une bibliothèque, votre bibliothèque. <i>"A mon tour !"</i> se veut participatif : si vous identifiez des actions enthousiasmantes, des informations étonnantes, des innovations passionnantes, n'hésitez à nous les indiquer. Nous comptons sur vous.</h6>
+       </div>
+    </div>
+  </div>
+
+  <div class="container-fluid fondcontainerbas col-md-12 col-sm-12 col-lg-12 pb-lg-5">
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="row justify-content-center aremplir">
+    <div class="form-inputs">
+        <%= f.input :email,
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" } %>
+        <%= f.input :password,
+                    required: false,
+                    input_html: { autocomplete: "current-password" } %>
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    </div>
+  </div>
+
+  <div class="row justify-content-center pb-lg-5">
+       <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+        <%= link_to "Mot de passe oublié", new_password_path(resource_name), style: "color: #138A36; font-weight: bold; padding-bottom: 10px; top: -5px;" %><br />
+       <% end %>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="form-actions">
+      <%= f.button :submit, "Valider", class: "bouton2" %>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="form-actions">
+       <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+       <%= link_to "Nouvel utilisateur", new_registration_path(resource_name), class: "bouton2"%><br />
+       <% end %>
+    </div>
+  </div>
+  <% end %>
+ </div>
+</div>
+
